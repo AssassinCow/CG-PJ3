@@ -1,0 +1,1544 @@
+{
+  "concept_id": "prism_dispersion_teaching",
+  "fps": 24,
+  "resolution": [
+    960,
+    540
+  ],
+  "shots": [
+    {
+      "node_id": "node_01",
+      "start_sec": 0.0,
+      "duration_sec": 3.5,
+      "camera": [
+        {
+          "time_sec": 0.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 3.5,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "glass_prism",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "incident_white_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 2.87,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "surface_normal_entry",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "surface_normal_exit",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "internal_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 2.87,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "spectrum_red_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_green_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_blue_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "projection_screen",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "red_screen_dot",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "A single white ray approaches a transparent glass prism on a teaching bench, with the screen waiting to record the separated spectrum."
+    },
+    {
+      "node_id": "node_02",
+      "start_sec": 3.5,
+      "duration_sec": 4.0,
+      "camera": [
+        {
+          "time_sec": 3.5,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 7.5,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "glass_prism",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "incident_white_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 3.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 6.78,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "surface_normal_entry",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "surface_normal_exit",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "internal_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 3.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 6.78,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "spectrum_red_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_green_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_blue_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "projection_screen",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "red_screen_dot",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "n_1\\sin\\theta_i = n_2\\sin\\theta_t",
+      "caption": "At the first prism face, the incident ray bends toward the surface normal according to Snell's law."
+    },
+    {
+      "node_id": "node_03",
+      "start_sec": 7.5,
+      "duration_sec": 4.5,
+      "camera": [
+        {
+          "time_sec": 7.5,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 12.0,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "glass_prism",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "incident_white_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 7.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 11.19,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "surface_normal_entry",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "surface_normal_exit",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "internal_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 7.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 11.19,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "spectrum_red_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_green_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_blue_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "projection_screen",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "red_screen_dot",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "n_{blue} > n_{green} > n_{red}",
+      "caption": "Inside the prism, different refractive indices make red bend least, green bend more, and blue bend most."
+    },
+    {
+      "node_id": "node_04",
+      "start_sec": 12.0,
+      "duration_sec": 4.0,
+      "camera": [
+        {
+          "time_sec": 12.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 16.0,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "glass_prism",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "incident_white_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 12.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 15.28,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "surface_normal_entry",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "surface_normal_exit",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "internal_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 12.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 15.28,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "spectrum_red_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_green_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "spectrum_blue_ray",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": []
+        },
+        {
+          "name": "projection_screen",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "red_screen_dot",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "The same incident ray produces different output directions because each color experiences a different refractive index."
+    }
+  ]
+}

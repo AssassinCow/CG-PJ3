@@ -1,0 +1,44 @@
+[project]
+name = "cg-tutor"
+version = "0.1.0"
+description = "Multi-agent system for generating 3D educational animations of CG concepts."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "requests>=2.31",
+    "matplotlib>=3.8",  # formula overlay
+    "Pillow>=10.0",     # image composition
+]
+
+[project.optional-dependencies]
+# Only installed if you want to bypass the CLI-subprocess providers
+# (claude-cli / codex-cli) and call provider SDKs directly.
+llm = [
+    "openai>=1.40",
+    "anthropic>=0.34",
+    "google-genai>=1.0",
+    "google-generativeai>=0.7",
+    "socksio>=1.0",
+]
+# Slides builder (scripts/build_ppt.py).
+slides = [
+    "python-pptx>=1.0",
+]
+# Tests + linters.
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

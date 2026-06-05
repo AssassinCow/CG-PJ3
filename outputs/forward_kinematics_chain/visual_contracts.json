@@ -1,0 +1,283 @@
+{
+  "node_01": {
+    "shot_id": "node_01",
+    "required_anchors": [
+      "base_segment",
+      "upper_arm_segment",
+      "forearm_segment",
+      "joint_J1_sphere",
+      "joint_J2_sphere",
+      "end_effector_E_marker",
+      "local_frame_J1",
+      "local_frame_J2",
+      "local_frame_E",
+      "soft_floor_plane"
+    ],
+    "required_labels": [],
+    "required_vectors": [],
+    "required_relationships": [
+      "Lay compared components out with clear separation and stable ordering.",
+      "base_segment is anchored at the floor origin",
+      "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+      "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+      "end_effector_E_marker is attached to the tip of forearm_segment",
+      "local_frame_J1 rotates with the base and upper arm subtree",
+      "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+      "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not abstract away scene anchor: base_segment.",
+      "Do not abstract away scene anchor: upper_arm_segment.",
+      "Do not abstract away scene anchor: forearm_segment.",
+      "Do not abstract away scene anchor: joint_J1_sphere.",
+      "Do not abstract away scene anchor: joint_J2_sphere.",
+      "Do not abstract away scene anchor: end_effector_E_marker.",
+      "Do not abstract away scene anchor: local_frame_J1.",
+      "Do not abstract away scene anchor: local_frame_J2.",
+      "Do not abstract away scene anchor: local_frame_E.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "robot arm replaced by disconnected line segments",
+      "three-segment hierarchy replaced by a free-floating point trace",
+      "local coordinate frames drawn as global static axes only",
+      "J1 and J2 motion shown as independent unparented rotations",
+      "end-effector trajectory shown without visible joint-driven cause",
+      "formula lesson replaced by generic transformation arrows",
+      "single rig split into multiple comparison copies"
+    ]
+  },
+  "node_02": {
+    "shot_id": "node_02",
+    "required_anchors": [
+      "base_segment",
+      "upper_arm_segment",
+      "forearm_segment",
+      "joint_J1_sphere",
+      "joint_J2_sphere",
+      "end_effector_E_marker",
+      "local_frame_J1",
+      "local_frame_J2",
+      "local_frame_E",
+      "soft_floor_plane"
+    ],
+    "required_labels": [
+      "theta_1"
+    ],
+    "required_vectors": [
+      "E",
+      "R"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "base_segment is anchored at the floor origin",
+      "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+      "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+      "end_effector_E_marker is attached to the tip of forearm_segment",
+      "local_frame_J1 rotates with the base and upper arm subtree",
+      "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+      "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: base_segment.",
+      "Do not abstract away scene anchor: upper_arm_segment.",
+      "Do not abstract away scene anchor: forearm_segment.",
+      "Do not abstract away scene anchor: joint_J1_sphere.",
+      "Do not abstract away scene anchor: joint_J2_sphere.",
+      "Do not abstract away scene anchor: end_effector_E_marker.",
+      "Do not abstract away scene anchor: local_frame_J1.",
+      "Do not abstract away scene anchor: local_frame_J2.",
+      "Do not abstract away scene anchor: local_frame_E.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "robot arm replaced by disconnected line segments",
+      "three-segment hierarchy replaced by a free-floating point trace",
+      "local coordinate frames drawn as global static axes only",
+      "J1 and J2 motion shown as independent unparented rotations",
+      "end-effector trajectory shown without visible joint-driven cause",
+      "formula lesson replaced by generic transformation arrows",
+      "single rig split into multiple comparison copies",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_03": {
+    "shot_id": "node_03",
+    "required_anchors": [
+      "base_segment",
+      "upper_arm_segment",
+      "forearm_segment",
+      "joint_J1_sphere",
+      "joint_J2_sphere",
+      "end_effector_E_marker",
+      "local_frame_J1",
+      "local_frame_J2",
+      "local_frame_E",
+      "soft_floor_plane"
+    ],
+    "required_labels": [
+      "visible text labels"
+    ],
+    "required_vectors": [
+      "E"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "base_segment is anchored at the floor origin",
+      "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+      "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+      "end_effector_E_marker is attached to the tip of forearm_segment",
+      "local_frame_J1 rotates with the base and upper arm subtree",
+      "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+      "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: base_segment.",
+      "Do not abstract away scene anchor: upper_arm_segment.",
+      "Do not abstract away scene anchor: forearm_segment.",
+      "Do not abstract away scene anchor: joint_J1_sphere.",
+      "Do not abstract away scene anchor: joint_J2_sphere.",
+      "Do not abstract away scene anchor: end_effector_E_marker.",
+      "Do not abstract away scene anchor: local_frame_J1.",
+      "Do not abstract away scene anchor: local_frame_J2.",
+      "Do not abstract away scene anchor: local_frame_E.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "robot arm replaced by disconnected line segments",
+      "three-segment hierarchy replaced by a free-floating point trace",
+      "local coordinate frames drawn as global static axes only",
+      "J1 and J2 motion shown as independent unparented rotations",
+      "end-effector trajectory shown without visible joint-driven cause",
+      "formula lesson replaced by generic transformation arrows",
+      "single rig split into multiple comparison copies"
+    ]
+  },
+  "node_04": {
+    "shot_id": "node_04",
+    "required_anchors": [
+      "base_segment",
+      "upper_arm_segment",
+      "forearm_segment",
+      "joint_J1_sphere",
+      "joint_J2_sphere",
+      "end_effector_E_marker",
+      "local_frame_J1",
+      "local_frame_J2",
+      "local_frame_E",
+      "soft_floor_plane"
+    ],
+    "required_labels": [
+      "visible text labels"
+    ],
+    "required_vectors": [
+      "E"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "base_segment is anchored at the floor origin",
+      "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+      "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+      "end_effector_E_marker is attached to the tip of forearm_segment",
+      "local_frame_J1 rotates with the base and upper arm subtree",
+      "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+      "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: base_segment.",
+      "Do not abstract away scene anchor: upper_arm_segment.",
+      "Do not abstract away scene anchor: forearm_segment.",
+      "Do not abstract away scene anchor: joint_J1_sphere.",
+      "Do not abstract away scene anchor: joint_J2_sphere.",
+      "Do not abstract away scene anchor: end_effector_E_marker.",
+      "Do not abstract away scene anchor: local_frame_J1.",
+      "Do not abstract away scene anchor: local_frame_J2.",
+      "Do not abstract away scene anchor: local_frame_E.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "robot arm replaced by disconnected line segments",
+      "three-segment hierarchy replaced by a free-floating point trace",
+      "local coordinate frames drawn as global static axes only",
+      "J1 and J2 motion shown as independent unparented rotations",
+      "end-effector trajectory shown without visible joint-driven cause",
+      "formula lesson replaced by generic transformation arrows",
+      "single rig split into multiple comparison copies",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_05": {
+    "shot_id": "node_05",
+    "required_anchors": [
+      "base_segment",
+      "upper_arm_segment",
+      "forearm_segment",
+      "joint_J1_sphere",
+      "joint_J2_sphere",
+      "end_effector_E_marker",
+      "local_frame_J1",
+      "local_frame_J2",
+      "local_frame_E",
+      "soft_floor_plane"
+    ],
+    "required_labels": [
+      "J1",
+      "J2",
+      "E",
+      "position formula overlay"
+    ],
+    "required_vectors": [
+      "E"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "base_segment is anchored at the floor origin",
+      "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+      "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+      "end_effector_E_marker is attached to the tip of forearm_segment",
+      "local_frame_J1 rotates with the base and upper arm subtree",
+      "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+      "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not show component comparisons without labels.",
+      "Do not abstract away scene anchor: base_segment.",
+      "Do not abstract away scene anchor: upper_arm_segment.",
+      "Do not abstract away scene anchor: forearm_segment.",
+      "Do not abstract away scene anchor: joint_J1_sphere.",
+      "Do not abstract away scene anchor: joint_J2_sphere.",
+      "Do not abstract away scene anchor: end_effector_E_marker.",
+      "Do not abstract away scene anchor: local_frame_J1.",
+      "Do not abstract away scene anchor: local_frame_J2.",
+      "Do not abstract away scene anchor: local_frame_E.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "robot arm replaced by disconnected line segments",
+      "three-segment hierarchy replaced by a free-floating point trace",
+      "local coordinate frames drawn as global static axes only",
+      "J1 and J2 motion shown as independent unparented rotations",
+      "end-effector trajectory shown without visible joint-driven cause",
+      "formula lesson replaced by generic transformation arrows",
+      "single rig split into multiple comparison copies",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  }
+}

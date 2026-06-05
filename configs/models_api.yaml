@@ -1,0 +1,39 @@
+# Direct API model assignment. This file is the default model config.
+#
+# Official provider slugs:
+#   openai/<model>    -> OPENAI_API_KEY
+#   anthropic/<model> -> ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN
+#   google/<model>    -> GOOGLE_API_KEY or GEMINI_API_KEY
+#
+# Replace model names with the officially available models for your account.
+# This project does not require or configure a private relay endpoint.
+
+agents:
+  concept_decomposer:
+    primary: openai/gpt-5.5
+    fallback: anthropic/claude-sonnet-4.6
+
+  scene_profile:
+    primary: openai/gpt-5.5
+    fallback: anthropic/claude-sonnet-4.6
+
+  storyboard:
+    primary: anthropic/claude-sonnet-4.6
+    fallback: openai/gpt-5.5
+
+  blender_coder:
+    primary: anthropic/claude-opus-4.7
+    fallback: openai/gpt-5.5
+
+  render_critic:
+    primary: anthropic/claude-sonnet-4.6
+    fallback: openai/gpt-5.5
+
+  latex_overlay:
+    primary: null
+    fallback: null
+
+defaults:
+  temperature: null
+  max_output_tokens: null
+  response_format: json

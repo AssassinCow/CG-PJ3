@@ -1,0 +1,98 @@
+{
+  "profile_id": "shape_morphing_vertex_blend",
+  "base_profile": "transformation_demo",
+  "visual_goal": "A clean teaching transformation demo where one continuous hero mesh visibly morphs through compatible target silhouettes using sparse vertex markers, thin trajectory traces, and compact formula/t controls.",
+  "allowed_helpers": [
+    "formula_overlay",
+    "small_side_panel",
+    "t_slider",
+    "sparse_vertex_dots",
+    "thin_vertex_trajectory_lines",
+    "before_after_labels",
+    "subtle_surface_grid",
+    "motion_trails"
+  ],
+  "forbidden_helpers": [
+    "ghost_objects",
+    "side_by_side_mesh_copies",
+    "duplicate_reference_meshes",
+    "axes",
+    "grid",
+    "axis_arrows",
+    "thick_arrows",
+    "full_vertex_dot_cloud",
+    "unlabeled_axes",
+    "long_explanatory_text_panels",
+    "laser_webs",
+    "sci_fi_fog"
+  ],
+  "preferred_geometry": [
+    "single_subdivided_hero_mesh",
+    "shared_topology_cube_sphere_capsule_star_targets",
+    "soft_floor_plane",
+    "neutral_gradient_background",
+    "sparse_sample_vertex_markers",
+    "thin_straight_interpolation_segments",
+    "compact_teaching_side_panel"
+  ],
+  "overlay_policy": {
+    "formula_style": "teaching_overlay",
+    "disable_formula_overlay": false,
+    "avoid_center_occlusion": true
+  },
+  "critic_priorities": [
+    "keep exactly one hero mesh on screen at all times",
+    "make per-vertex correspondence and straight-line interpolation visible",
+    "keep formulas and t controls readable without covering the mesh",
+    "preserve shared topology across cube, sphere, capsule, and rounded star",
+    "maintain a clean soft-floor teaching aesthetic"
+  ],
+  "critic_rubric": {
+    "must_have": [
+      "one centered hero mesh morphing continuously",
+      "about 20 sparse vertex dots visible on the surface",
+      "thin trajectory lines during cube-to-sphere interpolation",
+      "readable formula overlay and t slider in a side panel",
+      "cube, sphere, capsule, and rounded star share topology"
+    ],
+    "must_avoid": [
+      "side-by-side or ghost duplicate meshes",
+      "torus, holes, or topology-changing targets",
+      "dots on every vertex making the mesh noisy",
+      "axes, grid arrows, or generic coordinate-frame clutter",
+      "formula overlay covering the hero mesh"
+    ],
+    "aesthetic_goals": [
+      "clean undergraduate teaching scene",
+      "soft floor with neutral gradient background",
+      "liquid-metal smooth motion with crisp cube holds",
+      "subtle lighting from two soft key lights and one rim light"
+    ],
+    "blocking_conditions": [
+      "more than one hero mesh appears",
+      "morphing is replaced by cuts between separate objects",
+      "vertex correspondence is not visible",
+      "target shapes do not appear to share the same vertex set",
+      "required formulas or t progression are absent"
+    ]
+  },
+  "repair_policy": [
+    "remove duplicate or side-by-side target meshes and keep only the morphing hero mesh",
+    "replace axes or grid helpers with sparse vertex dots and thin interpolation traces",
+    "move formulas and t slider into a compact side panel away from the mesh center",
+    "reduce vertex markers to a readable sparse subset if the surface becomes cluttered",
+    "replace any topology-changing target with a same-index deformation of the shared mesh",
+    "restore soft floor, neutral background, and subtle studio lighting if the scene becomes dark or sci-fi"
+  ],
+  "persistent_anchors": [],
+  "spatial_relationships": [],
+  "forbidden_abstractions": [
+    "cube sphere capsule and star shown as separate side-by-side objects",
+    "shape morphing represented as a hard cut instead of continuous vertex motion",
+    "target shapes generated with different vertex counts or inconsistent indexing",
+    "rounded star replaced by a torus or any hole-bearing topology",
+    "all vertices covered with markers until the surface becomes unreadable",
+    "generic transformation classroom axes overpowering the morphing mesh",
+    "black void or foggy sci-fi stage replacing the soft teaching floor"
+  ]
+}

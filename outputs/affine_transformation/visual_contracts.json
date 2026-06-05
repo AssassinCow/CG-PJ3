@@ -1,0 +1,74 @@
+{
+  "node_01": {
+    "shot_id": "node_01",
+    "required_anchors": [],
+    "required_labels": [],
+    "required_vectors": [
+      "T"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Lay compared components out with clear separation and stable ordering."
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_02": {
+    "shot_id": "node_02",
+    "required_anchors": [],
+    "required_labels": [],
+    "required_vectors": [
+      "R"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head."
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_03": {
+    "shot_id": "node_03",
+    "required_anchors": [],
+    "required_labels": [
+      "appearing along x",
+      "y",
+      "z directions"
+    ],
+    "required_vectors": [],
+    "required_relationships": [],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_04": {
+    "shot_id": "node_04",
+    "required_anchors": [],
+    "required_labels": [],
+    "required_vectors": [],
+    "required_relationships": [],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  }
+}

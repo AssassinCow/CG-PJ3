@@ -1,0 +1,89 @@
+concept_id: forward_kinematics_chain
+title: Forward Kinematics and Hierarchical Transforms
+target_audience: undergraduate computer graphics students
+duration_sec: 18.0
+scene_profile: transformation_demo
+key_points:
+  - >-
+    Establish the rig: a three-segment robotic arm stands on a soft
+    floor. Segment 1 (the base) is anchored at the origin. Segment 2
+    (the upper arm) is parented to segment 1 at joint J1. Segment 3
+    (the forearm) is parented to segment 2 at joint J2. A small
+    end-effector marker E is attached at the tip. Each joint is
+    drawn as a colored sphere with a label J1, J2, and the tip as E.
+    Show three local coordinate frames (X red, Y green, Z blue) at
+    the three joints to make the parent-child transform stack visible.
+  - >-
+    Rotate joint J1 only, keeping J2 fixed at its rest angle. The
+    upper arm sweeps in an arc around the base; the forearm and
+    end-effector follow rigidly because they inherit J1's rotation.
+    A small side panel shows the J1 angle theta_1 advancing 0 to 60
+    degrees. The end-effector E leaves a thin trace curve so the
+    induced motion is visible.
+  - >-
+    Rotate joint J2 only, with J1 fixed at theta_1 = 60 deg. Now the
+    forearm pivots around J2 while the upper arm stays still. The
+    end-effector traces a second arc, centered at J2 rather than at
+    the base. The side panel shows theta_2 advancing 0 to 90 deg.
+  - >-
+    Demonstrate composition: J1 and J2 rotate simultaneously along a
+    smooth keyframed path. The end-effector traces a complex curve
+    that is the composition of two rotations applied through the
+    parent-child chain. Overlay the matrix product formula
+    T_end = T_base * R1(theta_1) * L1 * R2(theta_2) * L2 so the
+    viewer sees the algebra match the picture.
+  - >-
+    Final composite: a clean turntable camera move around the rig
+    while it performs one smooth pick-and-place motion (J1 sweeps
+    one way, J2 the other). The end-effector trace persists as a
+    smooth curve in space, clearly the result of hierarchical
+    transforms rather than free 3D animation.
+must_show_formulas:
+  - "T_{\\text{end}} = T_{\\text{base}} \\cdot R_1(\\theta_1) \\cdot L_1 \\cdot R_2(\\theta_2) \\cdot L_2"
+  - "\\mathbf{p}_{\\text{end}} = T_{\\text{end}} \\cdot \\mathbf{p}_{\\text{local}}"
+  - "R(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}"
+visual_style_constraints:
+  - >-
+    Keep exactly one robot arm rig on screen. Do not duplicate it
+    into side-by-side comparisons. The rig has exactly three rigid
+    segments (base, upper arm, forearm) and one end-effector marker.
+  - >-
+    Implement the chain with Blender object parenting (segment2
+    parented to segment1, segment3 parented to segment2) so the
+    rotations naturally compose through Blender's transform stack.
+    Do not bake world-space positions per frame.
+  - >-
+    Show local coordinate axes at each joint (X red, Y green, Z
+    blue) as thin attached arrows so the viewer can see the basis
+    rotating with the parent's transform.
+  - >-
+    Draw the end-effector trajectory trace as a thin colored curve
+    that grows as the rig moves. The trace is the strongest visual
+    evidence that the end-effector position is determined by joint
+    angles, not by free animation.
+  - >-
+    Use a clean teaching scene: soft floor plane, neutral gradient
+    background, two soft key lights, one rim light. No black void,
+    no laser webs, no factory environment.
+  - >-
+    Labels J1, J2, E, theta_1, theta_2, and the formula overlay are
+    the only on-screen text. Do not write paragraph text inside the
+    3D scene.
+graphics_principles:
+  - >-
+    Forward kinematics computes the end-effector pose from a known
+    sequence of joint angles by walking down a parent-child chain
+    and composing local transforms.
+  - >-
+    Each joint contributes a local rotation R_i and a translation
+    L_i (the bone length offset). The end-effector world transform
+    is the matrix product of all ancestors.
+  - >-
+    Hierarchical transform stacks are foundational to scene graphs,
+    skeletal animation, articulated robots, and any rig where one
+    object should move relative to its parent automatically.
+  - >-
+    The dynamic content of this concept is intrinsic: small joint
+    angle changes produce visibly different end-effector
+    trajectories, and the composition rule is best seen by watching
+    the trace grow as both joints rotate.

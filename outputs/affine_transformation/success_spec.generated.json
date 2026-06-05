@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "kind": "stay_in_screen_safe",
+      "anchors": [
+        "parameter_panel"
+      ],
+      "source": "generated",
+      "confidence": 0.45,
+      "failure_class": "success_soft",
+      "reason": "panel/stack/HUD-like anchor should not be cropped",
+      "metadata": {}
+    },
+    {
+      "kind": "animation_coverage",
+      "anchors": [
+        "hero_mesh",
+        "sample_vertex_marker"
+      ],
+      "source": "generated",
+      "confidence": 0.5,
+      "failure_class": "success_soft",
+      "reason": "storyboard declares non-visibility keyframes",
+      "metadata": {}
+    }
+  ]
+}

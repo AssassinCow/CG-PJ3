@@ -1,0 +1,530 @@
+{
+  "concept_id": "affine_transformation",
+  "fps": 24,
+  "resolution": [
+    960,
+    540
+  ],
+  "scene_profile_id": "affine_transformation_3d",
+  "scene_profile_base": "transformation_demo",
+  "shots": [
+    {
+      "node_id": "node_01",
+      "start_sec": 0.0,
+      "duration_sec": 4.0,
+      "visual_intent": "A blue cube sits on a gray 3D grid beside red, green, and blue coordinate axes; a yellow displacement arrow \\(\\mathbf{t}\\) points diagonally upward and right, and the cube glides along it while a translucent ghost cube remains at the start. The camera is fixed in a three-quarter view, and matching colored corner markers on the cube stay parallel throughout the motion.",
+      "narrative": "A translation adds the same displacement to every point, so the object slides without turning or changing shape.",
+      "formula": "\\mathbf{T}(\\mathbf{t}) = \\begin{bmatrix} \\mathbf{I} & \\mathbf{t} \\\\ \\mathbf{0} & 1 \\end{bmatrix}",
+      "caption": "A translation adds the same displacement to every point, so the object slides without turning or changing shape.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "transformation_sequence",
+          "priority": "hard",
+          "requires": [
+            "source_shape",
+            "transformed_shape",
+            "coordinate_frame"
+          ],
+          "relationships": [
+            "before and after states remain comparable",
+            "transformation path/order is visible when sequence matters"
+          ],
+          "forbidden": [
+            "Do not show only the final object when order/comparison is being taught."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "custom",
+          "priority": "hard",
+          "requires": [
+            "T"
+          ],
+          "relationships": [
+            "Draw each required vector/arrow as a full visible shaft plus head.",
+            "Lay compared components out with clear separation and stable ordering."
+          ],
+          "forbidden": [
+            "Do not merge, overlap, or hide distinct vectors/arrows.",
+            "Do not place the main subject or labels under the formula overlay."
+          ],
+          "natural_language_contract": "Derived visual contract requirements that do not fit a more specific slot."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_01",
+        "required_anchors": [],
+        "required_labels": [],
+        "required_vectors": [
+          "T"
+        ],
+        "required_relationships": [
+          "Draw each required vector/arrow as a full visible shaft plus head.",
+          "Lay compared components out with clear separation and stable ordering."
+        ],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not merge, overlap, or hide distinct vectors/arrows.",
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    },
+    {
+      "node_id": "node_02",
+      "start_sec": 4.0,
+      "duration_sec": 5.0,
+      "visual_intent": "The cube is centered near the origin with a bright vertical blue z-axis passing through it; a white circular arc lies flat in the xy-plane around the axis, with arrowheads curling counterclockwise. A semi-transparent right hand wraps around the z-axis with the thumb pointing upward, while the cube rotates through angle \\(\\theta\\) and its top face stays level.",
+      "narrative": "A rotation about the z-axis keeps the axis fixed while points sweep circular paths according to the right-hand rule.",
+      "formula": "\\mathbf{R}_z(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}",
+      "caption": "A rotation about the z-axis keeps the axis fixed while points sweep circular paths according to the right-hand rule.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "transformation_sequence",
+          "priority": "hard",
+          "requires": [
+            "source_shape",
+            "transformed_shape",
+            "coordinate_frame"
+          ],
+          "relationships": [
+            "before and after states remain comparable",
+            "transformation path/order is visible when sequence matters"
+          ],
+          "forbidden": [
+            "Do not show only the final object when order/comparison is being taught."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "custom",
+          "priority": "hard",
+          "requires": [
+            "R"
+          ],
+          "relationships": [
+            "Draw each required vector/arrow as a full visible shaft plus head."
+          ],
+          "forbidden": [
+            "Do not merge, overlap, or hide distinct vectors/arrows.",
+            "Do not place the main subject or labels under the formula overlay."
+          ],
+          "natural_language_contract": "Derived visual contract requirements that do not fit a more specific slot."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_02",
+        "required_anchors": [],
+        "required_labels": [],
+        "required_vectors": [
+          "R"
+        ],
+        "required_relationships": [
+          "Draw each required vector/arrow as a full visible shaft plus head."
+        ],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not merge, overlap, or hide distinct vectors/arrows.",
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    },
+    {
+      "node_id": "node_03",
+      "start_sec": 9.0,
+      "duration_sec": 4.0,
+      "visual_intent": "The cube returns to the origin, surrounded by a faint wireframe copy of its original size; all eight vertices move radially outward along short glowing lines from the origin as the cube grows evenly. The camera slowly dollies back so the enlarged cube remains fully visible, with equal scale labels appearing along the x, y, and z directions.",
+      "narrative": "Uniform scaling multiplies every coordinate by the same factor, changing size while preserving proportions.",
+      "formula": "\\mathbf{S}(s) = s\\mathbf{I}",
+      "caption": "Uniform scaling multiplies every coordinate by the same factor, changing size while preserving proportions.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "transformation_sequence",
+          "priority": "hard",
+          "requires": [
+            "source_shape",
+            "transformed_shape",
+            "coordinate_frame"
+          ],
+          "relationships": [
+            "before and after states remain comparable",
+            "transformation path/order is visible when sequence matters"
+          ],
+          "forbidden": [
+            "Do not show only the final object when order/comparison is being taught."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "comparison_state",
+          "priority": "hard",
+          "requires": [
+            "reference_state",
+            "current_state"
+          ],
+          "relationships": [
+            "reference and current states are visible in the same shot or with stable continuity",
+            "differences are spatially aligned enough to compare"
+          ],
+          "forbidden": [
+            "Do not replace comparison with a single unlabelled state."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "custom",
+          "priority": "hard",
+          "requires": [
+            "appearing along x",
+            "y",
+            "z directions"
+          ],
+          "relationships": [],
+          "forbidden": [
+            "Do not omit required labels or make them too small to read.",
+            "Do not place the main subject or labels under the formula overlay."
+          ],
+          "natural_language_contract": "Derived visual contract requirements that do not fit a more specific slot."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_03",
+        "required_anchors": [],
+        "required_labels": [
+          "appearing along x",
+          "y",
+          "z directions"
+        ],
+        "required_vectors": [],
+        "required_relationships": [],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not omit required labels or make them too small to read.",
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    },
+    {
+      "node_id": "node_04",
+      "start_sec": 13.0,
+      "duration_sec": 5.0,
+      "visual_intent": "The screen splits into two synchronized 3D viewports: on the left, the cube scales, rotates about the origin, then translates to a high-right position; on the right, the cube translates first and then rotates around the origin into a different final location. Distinct orange motion trails trace each path, and the two final cubes are connected by a dashed red line to emphasize that they do not coincide.",
+      "narrative": "Composed affine transforms are applied in sequence, and changing the order changes the final position and orientation.",
+      "formula": "\\mathbf{M} = \\mathbf{T}\\,\\mathbf{R}\\,\\mathbf{S}",
+      "caption": "Composed affine transforms are applied in sequence, and changing the order changes the final position and orientation.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "transformation_sequence",
+          "priority": "hard",
+          "requires": [
+            "source_shape",
+            "transformed_shape",
+            "coordinate_frame"
+          ],
+          "relationships": [
+            "before and after states remain comparable",
+            "transformation path/order is visible when sequence matters"
+          ],
+          "forbidden": [
+            "Do not show only the final object when order/comparison is being taught."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_04",
+        "required_anchors": [],
+        "required_labels": [],
+        "required_vectors": [],
+        "required_relationships": [],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    }
+  ]
+}

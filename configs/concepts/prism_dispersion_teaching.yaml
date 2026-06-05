@@ -1,0 +1,73 @@
+concept_id: prism_dispersion_teaching
+title: Prism Dispersion Teaching Scene
+target_audience: undergraduate computer graphics students
+duration_sec: 16.0
+scene_profile: vector_teaching
+key_points:
+  - >-
+    Establish a polished optical-bench teaching scene: a transparent triangular
+    glass prism sits at the center on a dark matte bench, a thin white incident
+    ray enters from the left, and a small projection screen stands on the
+    right. Keep the same prism, incident ray, screen, and RGB exit rays visible
+    throughout.
+  - >-
+    Show refraction at the first prism face: the white ray bends toward the
+    normal as it enters the glass. Label the incident ray, surface normal,
+    angle of incidence theta_i, and refracted angle theta_t with short,
+    attached labels.
+  - >-
+    Show wavelength-dependent bending: inside and after the prism, the beam
+    separates into red, green, and blue rays. Red bends least, green is in the
+    middle, and blue bends most. The three rays land as separated dots on the
+    screen.
+  - >-
+    Demonstrate why dispersion happens: briefly highlight the relation
+    n_blue > n_green > n_red near the prism while the colored rays animate to
+    their final screen positions. Keep the formula small and secondary.
+  - >-
+    Final comparison: keep the incident white ray, prism, surface normals,
+    three colored output rays, and screen dots visible at once, with sparse
+    labels emphasizing "same incident ray" and "different refractive index".
+must_show_formulas:
+  - "n_1\\sin\\theta_i = n_2\\sin\\theta_t"
+  - "n_{blue} > n_{green} > n_{red}"
+visual_style_constraints:
+  - >-
+    Use a clean premium teaching setup, not a pure black void: optical bench,
+    transparent triangular prism, white incident ray, RGB exit rays, small
+    screen, and subtle grid ticks on the bench.
+  - >-
+    Keep all teaching anchors explicitly named and visible:
+    glass_prism, incident_white_ray, surface_normal_entry,
+    surface_normal_exit, internal_ray, spectrum_red_ray,
+    spectrum_green_ray, spectrum_blue_ray, projection_screen,
+    red_screen_dot, green_screen_dot, blue_screen_dot.
+  - >-
+    Rays must be thin and readable. Do not use thick laser bars, dense light
+    webs, cone arrowheads, or large sci-fi beams.
+  - >-
+    Labels should be short and attached to geometry: incident ray, normal,
+    theta_i, theta_t, red, green, blue, screen. Avoid large explanatory panels
+    that cover the prism.
+  - >-
+    The prism should look like transparent glass with bright edges and a light
+    cyan tint, not an opaque triangle. The screen should show three separated
+    colored dots or short streaks.
+  - >-
+    Maintain a consistent left-to-right spatial relationship: white incident
+    ray on the left, prism in the center, separated colored rays and screen on
+    the right.
+  - >-
+    Avoid unrelated scenery such as rainy windows, vehicles, underwater
+    scenes, museum lasers, tabletop water-glass props, or decorative abstract
+    floating shapes.
+graphics_principles:
+  - >-
+    Snell's law relates incident and refracted angles at each prism face.
+  - >-
+    Dispersion occurs because refractive index depends on wavelength.
+  - >-
+    Larger refractive index bends the ray more, so blue deviates more than red.
+  - >-
+    The projection screen makes the angular separation visible as separated
+    colored dots.

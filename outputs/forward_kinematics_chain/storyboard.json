@@ -1,0 +1,1475 @@
+{
+  "concept_id": "forward_kinematics_chain",
+  "fps": 24,
+  "resolution": [
+    960,
+    540
+  ],
+  "shots": [
+    {
+      "node_id": "node_01",
+      "start_sec": 0.0,
+      "duration_sec": 3.0,
+      "camera": [
+        {
+          "time_sec": 0.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 3.0,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "base_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "location",
+              "value": [
+                -1.2,
+                -0.35,
+                1.0
+              ]
+            },
+            {
+              "time_sec": 2.46,
+              "attr": "location",
+              "value": [
+                -0.92,
+                -0.17,
+                1.06
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upper_arm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "forearm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j1_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j2_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.6000000000000001,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.6799999999999999,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "end_effector_e_marker",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            1.05,
+            0.35,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "location",
+              "value": [
+                1.05,
+                0.35,
+                1.08
+              ]
+            },
+            {
+              "time_sec": 2.46,
+              "attr": "location",
+              "value": [
+                1.33,
+                0.53,
+                1.14
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_frame_j1",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_j2",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_e",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "A forward-kinematics chain begins with child segments attached to parent joints, each carrying its own local coordinate frame."
+    },
+    {
+      "node_id": "node_02",
+      "start_sec": 3.0,
+      "duration_sec": 3.8,
+      "camera": [
+        {
+          "time_sec": 3.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 6.8,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "base_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 3.0,
+              "attr": "location",
+              "value": [
+                -1.2,
+                -0.35,
+                1.0
+              ]
+            },
+            {
+              "time_sec": 6.116,
+              "attr": "location",
+              "value": [
+                -1.48,
+                -0.17,
+                1.06
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upper_arm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "forearm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j1_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j2_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.6000000000000001,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.6799999999999999,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "end_effector_e_marker",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            1.05,
+            0.35,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 3.0,
+              "attr": "location",
+              "value": [
+                1.05,
+                0.35,
+                1.08
+              ]
+            },
+            {
+              "time_sec": 6.116,
+              "attr": "location",
+              "value": [
+                0.77,
+                0.53,
+                1.14
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_frame_j1",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_j2",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_e",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "R(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}",
+      "caption": "When J1 rotates, every child below it inherits that rotation, so the upper arm, forearm, and end-effector move as one rigid subtree."
+    },
+    {
+      "node_id": "node_03",
+      "start_sec": 6.8,
+      "duration_sec": 3.6,
+      "camera": [
+        {
+          "time_sec": 6.8,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 10.4,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "base_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 6.8,
+              "attr": "location",
+              "value": [
+                -1.2,
+                -0.35,
+                1.0
+              ]
+            },
+            {
+              "time_sec": 9.752,
+              "attr": "location",
+              "value": [
+                -0.92,
+                -0.17,
+                1.06
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upper_arm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "forearm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j1_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j2_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.6000000000000001,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.6799999999999999,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "end_effector_e_marker",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            1.05,
+            0.35,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 6.8,
+              "attr": "location",
+              "value": [
+                1.05,
+                0.35,
+                1.08
+              ]
+            },
+            {
+              "time_sec": 9.752,
+              "attr": "location",
+              "value": [
+                1.33,
+                0.53,
+                1.14
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_frame_j1",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_j2",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_e",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "With the parent held fixed, rotating J2 changes only the forearm subtree and makes the end-effector orbit around J2."
+    },
+    {
+      "node_id": "node_04",
+      "start_sec": 10.4,
+      "duration_sec": 4.0,
+      "camera": [
+        {
+          "time_sec": 10.4,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 14.4,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "base_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 10.4,
+              "attr": "location",
+              "value": [
+                -1.2,
+                -0.35,
+                1.0
+              ]
+            },
+            {
+              "time_sec": 13.68,
+              "attr": "location",
+              "value": [
+                -1.48,
+                -0.17,
+                1.06
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upper_arm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "forearm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j1_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j2_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.6000000000000001,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.6799999999999999,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "end_effector_e_marker",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            1.05,
+            0.35,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 10.4,
+              "attr": "location",
+              "value": [
+                1.05,
+                0.35,
+                1.08
+              ]
+            },
+            {
+              "time_sec": 13.68,
+              "attr": "location",
+              "value": [
+                0.77,
+                0.53,
+                1.14
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_frame_j1",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_j2",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_e",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "T_{\\text{end}} = T_{\\text{base}} \\cdot R_1(\\theta_1) \\cdot L_1 \\cdot R_2(\\theta_2) \\cdot L_2",
+      "caption": "The world transform of the end-effector is the ordered product of the base transform, joint rotations, and link offsets."
+    },
+    {
+      "node_id": "node_05",
+      "start_sec": 14.4,
+      "duration_sec": 3.6,
+      "camera": [
+        {
+          "time_sec": 14.4,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 18.0,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "base_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 14.4,
+              "attr": "location",
+              "value": [
+                -1.2,
+                -0.35,
+                1.0
+              ]
+            },
+            {
+              "time_sec": 17.352,
+              "attr": "location",
+              "value": [
+                -0.92,
+                -0.17,
+                1.06
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upper_arm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "forearm_segment",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j1_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.15000000000000013,
+            -0.35,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "joint_j2_sphere",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            0.6000000000000001,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.6799999999999999,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "end_effector_e_marker",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            1.05,
+            0.35,
+            1.08
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 14.4,
+              "attr": "location",
+              "value": [
+                1.05,
+                0.35,
+                1.08
+              ]
+            },
+            {
+              "time_sec": 17.352,
+              "attr": "location",
+              "value": [
+                1.33,
+                0.53,
+                1.14
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_frame_j1",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_j2",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.75,
+            0.0,
+            1.24
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.44,
+              0.65,
+              0.7
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "local_frame_e",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -0.29999999999999993,
+            0.35,
+            1.0
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.56,
+              0.65,
+              1.0
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "\\mathbf{p}_{\\text{end}} = T_{\\text{end}} \\cdot \\mathbf{p}_{\\text{local}}",
+      "caption": "Forward kinematics evaluates the composed transform to place the end-effector in world space from the known joint angles."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "profile_id": "prism_dispersion_teaching",
+  "base_profile": "vector_teaching",
+  "visual_goal": "Clean premium optical-bench teaching scene showing a thin white incident ray refracting through a transparent prism and dispersing into separated red, green, and blue screen dots with sparse attached labels and small formulas.",
+  "allowed_helpers": [
+    "thin_ray_paths",
+    "dashed_surface_normals",
+    "angle_arc_labels",
+    "attached_text_labels",
+    "small_formula_overlay",
+    "screen_dot_markers",
+    "bench_grid_ticks",
+    "subtle_highlight_markers"
+  ],
+  "forbidden_helpers": [
+    "thick_arrows",
+    "arrow_primitives",
+    "cone_arrowheads",
+    "thick_laser_bars",
+    "dense_light_webs",
+    "large_axes",
+    "classroom_panels",
+    "large_explanatory_panels",
+    "overlapping_formula_overlay",
+    "unlabeled_vectors",
+    "decorative_floating_shapes",
+    "sci_fi_beams"
+  ],
+  "preferred_geometry": [
+    "transparent_triangular_glass_prism",
+    "dark_matte_optical_bench",
+    "thin_colored_polyline_rays",
+    "thin_white_incident_ray",
+    "dashed_normal_lines",
+    "small_angle_arcs",
+    "upright_projection_screen",
+    "separated_rgb_screen_dots",
+    "subtle_bench_grid_ticks"
+  ],
+  "overlay_policy": {
+    "formula_style": "small_teaching_overlay",
+    "disable_formula_overlay": false,
+    "avoid_center_occlusion": true
+  },
+  "critic_priorities": [
+    "preserve the left-to-right optical bench layout",
+    "keep prism transparency and bright glass edges visible",
+    "make thin rays, normals, and angle arcs readable without arrow clutter",
+    "show red bends least, green middle, and blue most",
+    "keep formulas small and away from the prism and ray intersections"
+  ],
+  "critic_rubric": {
+    "must_have": [
+      "glass_prism, incident_white_ray, projection_screen, and RGB exit rays remain visible",
+      "surface_normal_entry, surface_normal_exit, theta_i, and theta_t are readable when introduced",
+      "Snell formula and refractive-index inequality appear small and secondary",
+      "red, green, and blue rays land as separated screen dots",
+      "left-to-right order is white ray, prism, colored rays, screen"
+    ],
+    "must_avoid": [
+      "opaque triangle replacing the transparent glass prism",
+      "thick laser bars, cone arrowheads, or sci-fi beam effects",
+      "large classroom panels covering the prism or screen",
+      "merged or mislabeled RGB rays",
+      "unrelated scenery such as rain, vehicles, water glasses, or museum lasers"
+    ],
+    "aesthetic_goals": [
+      "premium clean teaching composition",
+      "dark matte bench with subtle grid ticks",
+      "light cyan glass tint with bright beveled prism edges",
+      "sparse labels attached directly to geometry",
+      "balanced wide final comparison view"
+    ],
+    "blocking_conditions": [
+      "required prism, incident ray, colored rays, or projection screen is missing",
+      "dispersion order is wrong or the screen dots are not separated",
+      "formula overlays obscure the central refraction geometry",
+      "rays are too thick or cluttered to read",
+      "the scene becomes a generic black void or unrelated cinematic environment"
+    ]
+  },
+  "repair_policy": [
+    "replace any thick beam or arrow primitive with a thin readable ray polyline",
+    "keep labels short and attached beside their referenced ray, normal, angle, or screen",
+    "move formulas to the lower bench edge or a clear side area if they overlap the prism",
+    "restore transparent cyan glass material with bright edges if the prism becomes opaque",
+    "separate red, green, and blue ray paths and their screen dots if they merge",
+    "remove unrelated props, decorative shapes, and oversized classroom panels"
+  ],
+  "persistent_anchors": [
+    "glass_prism",
+    "incident_white_ray",
+    "surface_normal_entry",
+    "surface_normal_exit",
+    "internal_ray",
+    "spectrum_red_ray",
+    "spectrum_green_ray",
+    "spectrum_blue_ray",
+    "projection_screen",
+    "red_screen_dot"
+  ],
+  "spatial_relationships": [
+    "incident_white_ray enters from the left toward glass_prism",
+    "glass_prism stays centered on dark_matte_optical_bench",
+    "surface_normal_entry is perpendicular to the left prism face at the entry point",
+    "surface_normal_exit is perpendicular to the right prism face at the exit point",
+    "spectrum_red_ray bends least, spectrum_green_ray stays between, and spectrum_blue_ray bends most",
+    "projection_screen stands to the right of glass_prism",
+    "red_screen_dot, green_screen_dot, and blue_screen_dot sit separated on projection_screen at the ray endpoints"
+  ],
+  "forbidden_abstractions": [
+    "glass_prism replaced by a flat opaque triangle",
+    "projection_screen replaced by a blank glowing rectangle with no RGB dots",
+    "RGB rays collapsed into one white or rainbow smear",
+    "surface normals shown as generic axes unrelated to prism faces",
+    "formula blocks floating over the center of the prism",
+    "optical bench removed into a pure black void",
+    "decorative abstract particles substituted for the actual ray geometry"
+  ]
+}

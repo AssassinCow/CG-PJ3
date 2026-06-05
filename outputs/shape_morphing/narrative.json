@@ -1,0 +1,43 @@
+{
+  "concept_id": "shape_morphing",
+  "nodes": [
+    {
+      "id": "node_01",
+      "title": "One Mesh, One Vertex Set",
+      "description": "We begin with a single mesh whose fixed vertex set will be reused for every target shape.",
+      "formulas": [],
+      "duration_sec": 3.5,
+      "visual_intent": "A sharp cube-shaped hero mesh sits centered on a soft gradient floor, built from a subdivided cube or UV-sphere-like topology rather than separate cube geometry; about 20 selected vertices glow as small dots on corners, edges, and face centers. The camera holds a three-quarter view under two soft key lights and a faint rim light, with only the floating label \"shape A\" beside the mesh against a neutral gradient background."
+    },
+    {
+      "id": "node_02",
+      "title": "Linear Blend to a Sphere",
+      "description": "Each vertex moves from its cube position toward the matching sphere position as the blend parameter increases.",
+      "formulas": [
+        "\\mathbf{V}(t) = (1-t)\\,\\mathbf{V}_A + t\\,\\mathbf{V}_B, \\quad t \\in [0,1]"
+      ],
+      "duration_sec": 5.0,
+      "visual_intent": "The same single hero mesh continuously rounds from cube to sphere while the sampled vertex dots slide along straight paths, and thin pale trajectory segments connect each dot's cube start position to its sphere target position before fading near the end. A small clean side panel contains the formula overlay and a horizontal \"t\" slider moving from 0 to 1, while the label updates to \"shape A -> shape B\" with \"shape B\" referring to the sphere target."
+    },
+    {
+      "id": "node_03",
+      "title": "Corresponding Vertices Keep the Surface Together",
+      "description": "The morph stays smooth because vertex i in one shape always blends to vertex i in the next shape.",
+      "formulas": [
+        "\\mathbf{V}_i(t) = \\mathbf{V}_i^A + t\\,(\\mathbf{V}_i^B - \\mathbf{V}_i^A)"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "From the completed sphere, the single mesh elongates upward into a rounded capsule using the same visible sample dots and the same indexed surface grid, with no duplicate reference mesh and no holes or topology changes. The camera slowly arcs around the object so the viewer sees the dots maintain their relative ordering on the surface while the side panel resets \"t\" from 0 to 1 for the capsule target."
+    },
+    {
+      "id": "node_04",
+      "title": "Many Targets, One Continuous Rig",
+      "description": "Blendshape animation generalizes this idea by weighting several compatible target poses of the same mesh.",
+      "formulas": [
+        "\\mathbf{V}(t) = \\sum_{k=0}^{n-1} w_k(t)\\,\\mathbf{V}_k, \\quad \\sum_k w_k(t) = 1"
+      ],
+      "duration_sec": 5.5,
+      "visual_intent": "The capsule compresses and spreads into a flattened rounded star or rounded diamond silhouette, still as the same hero mesh with the same sparse vertex dots riding on the surface; the side panel shows the formula overlay with simple weight bars and the active \"t\" indicator, but no extra mesh copies. For the finale the mesh snaps back to the sharp cube pose, holds for a beat, then loops rapidly through sphere, capsule, and rounded star during a smooth turntable camera move, with liquid-metal shading during motion and crisp cube edges at the loop boundary."
+    }
+  ]
+}

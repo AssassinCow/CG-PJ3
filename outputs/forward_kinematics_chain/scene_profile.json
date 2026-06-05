@@ -1,0 +1,117 @@
+{
+  "profile_id": "forward_kinematics_chain",
+  "base_profile": "transformation_demo",
+  "visual_goal": "Clean teaching transformation demo showing one parented three-segment robotic arm whose local joint rotations compose into the end-effector trajectory.",
+  "allowed_helpers": [
+    "thin_local_axis_arrows",
+    "joint_labels",
+    "angle_side_panel",
+    "formula_overlay",
+    "end_effector_trace",
+    "soft_floor_reference",
+    "highlight_markers"
+  ],
+  "forbidden_helpers": [
+    "ghost_objects",
+    "before_after_labels",
+    "duplicate_rigs",
+    "side_by_side_comparisons",
+    "unlabeled_axes",
+    "ambiguous_before_after_state",
+    "paragraph_text_panels",
+    "classroom_panels",
+    "laser_webs",
+    "factory_environment",
+    "black_void",
+    "baked_world_space_animation"
+  ],
+  "preferred_geometry": [
+    "single_parented_robot_arm_rig",
+    "three_rigid_segments",
+    "colored_joint_spheres",
+    "thin_attached_rgb_axis_arrows",
+    "thin_curve_polyline_tracers",
+    "soft_floor_plane",
+    "neutral_gradient_background"
+  ],
+  "overlay_policy": {
+    "formula_style": "teaching_overlay",
+    "disable_formula_overlay": false,
+    "avoid_center_occlusion": true
+  },
+  "critic_priorities": [
+    "preserve exactly one three-segment parented rig",
+    "make local coordinate frames readable at each joint",
+    "keep the end-effector trace thin, persistent, and visually central to the lesson",
+    "show formulas only as clean non-occluding teaching overlays",
+    "ensure motion comes from hierarchical rotations rather than free end-effector animation"
+  ],
+  "critic_rubric": {
+    "must_have": [
+      "one robot arm with exactly base, upper arm, forearm, and E marker",
+      "colored J1, J2, and E labels with thin RGB local axes attached",
+      "visible parent-child rotation behavior and growing E trajectory curves",
+      "theta_1 or theta_2 side panel only during the relevant joint rotation",
+      "required matrix formulas shown clearly when the storyboard calls for them"
+    ],
+    "must_avoid": [
+      "duplicated rigs or side-by-side comparison layouts",
+      "ghost before/after copies that imply separate arms",
+      "formula overlays covering the arm, joints, axes, or trace",
+      "paragraph text beyond J1, J2, E, theta_1, theta_2, and formulas",
+      "black void, factory setting, laser webs, or cluttered lighting props"
+    ],
+    "aesthetic_goals": [
+      "clean undergraduate teaching scene",
+      "soft floor plane with neutral gradient background",
+      "readable colored joint spheres and axis arrows",
+      "smooth keyframed motion with stable three-quarter views",
+      "thin elegant trajectory curves that reveal transform composition"
+    ],
+    "blocking_conditions": [
+      "the rig is not a single parented hierarchy",
+      "segment count differs from exactly three rigid segments",
+      "local axes or required labels are missing or unreadable",
+      "end-effector trace is absent or appears hand-animated independently",
+      "required formula overlay is missing in formula shots"
+    ]
+  },
+  "repair_policy": [
+    "remove duplicate rigs, ghost arm copies, and before-after comparison props",
+    "restore Blender-style parent hierarchy: upper arm under base, forearm under upper arm, E under forearm",
+    "attach thin red X, green Y, and blue Z arrows to each joint frame and keep labels offset but readable",
+    "move formulas to upper-right or side-panel space if they overlap the arm or trace",
+    "replace thick trails with thin colored curve polylines that grow from the E marker",
+    "keep the scene on a soft floor with neutral background and simple soft key/rim lighting"
+  ],
+  "persistent_anchors": [
+    "base_segment",
+    "upper_arm_segment",
+    "forearm_segment",
+    "joint_J1_sphere",
+    "joint_J2_sphere",
+    "end_effector_E_marker",
+    "local_frame_J1",
+    "local_frame_J2",
+    "local_frame_E",
+    "soft_floor_plane"
+  ],
+  "spatial_relationships": [
+    "base_segment is anchored at the floor origin",
+    "upper_arm_segment is parented to base_segment at joint_J1_sphere",
+    "forearm_segment is parented to upper_arm_segment at joint_J2_sphere",
+    "end_effector_E_marker is attached to the tip of forearm_segment",
+    "local_frame_J1 rotates with the base and upper arm subtree",
+    "local_frame_J2 and local_frame_E rotate with the forearm subtree",
+    "end_effector_trace grows from end_effector_E_marker and remains above soft_floor_plane"
+  ],
+  "forbidden_abstractions": [
+    "robot arm replaced by disconnected line segments",
+    "three-segment hierarchy replaced by a free-floating point trace",
+    "local coordinate frames drawn as global static axes only",
+    "J1 and J2 motion shown as independent unparented rotations",
+    "end-effector trajectory shown without visible joint-driven cause",
+    "formula lesson replaced by generic transformation arrows",
+    "single rig split into multiple comparison copies"
+  ]
+}

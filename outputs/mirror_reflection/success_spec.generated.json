@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "kind": "stay_in_screen_safe",
+      "anchors": [
+        "mirror_panel_m1"
+      ],
+      "source": "generated",
+      "confidence": 0.45,
+      "failure_class": "success_soft",
+      "reason": "panel/stack/HUD-like anchor should not be cropped",
+      "metadata": {}
+    },
+    {
+      "kind": "stay_in_screen_safe",
+      "anchors": [
+        "mirror_panel_m2"
+      ],
+      "source": "generated",
+      "confidence": 0.45,
+      "failure_class": "success_soft",
+      "reason": "panel/stack/HUD-like anchor should not be cropped",
+      "metadata": {}
+    },
+    {
+      "kind": "animation_coverage",
+      "anchors": [
+        "multi_bounce_ray_path",
+        "normal_arrows_n1_to_n5"
+      ],
+      "source": "generated",
+      "confidence": 0.5,
+      "failure_class": "success_soft",
+      "reason": "storyboard declares non-visibility keyframes",
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "concept_id": "mirror_reflection",
+  "nodes": [
+    {
+      "id": "node_01",
+      "title": "Clean Mirror Stage",
+      "description": "We begin with only the geometry: two parallel teaching mirrors, a source, and a target.",
+      "formulas": [],
+      "duration_sec": 2.5,
+      "visual_intent": "A neutral gradient background and soft reflective floor hold exactly two upright flat rectangular mirror panels facing each other, labeled M1 on the left and M2 on the right, each with a thin colored border and faint sheen; a small labeled laser source S sits near the front-left side, and a small target sphere T sits toward the back. The camera is a slightly elevated three-quarter view with two soft key lights, and no light rays, extra walls, prisms, fog, or decorative reflectors are present."
+    },
+    {
+      "id": "node_02",
+      "title": "One Specular Bounce",
+      "description": "At the first contact point, the outgoing direction is fixed by equal angles around the surface normal.",
+      "formulas": [
+        "\\theta_i = \\theta_r"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "A thin bright red ray grows from S to point P1 on mirror M1 using a bevel_factor_end reveal, then an orange reflected segment grows away from P1; each segment has a small arrowhead, and P1 is labeled at the mirror surface. A short normal arrow N1 stands perpendicular to M1 at P1, with two matched colored angle arcs labeled theta_i and theta_r plus a small equals sign between them, while the formula overlay appears as the only panel text."
+    },
+    {
+      "id": "node_03",
+      "title": "Second Bounce as a Vector Rule",
+      "description": "The same local normal rule computes the next reflected direction after the ray reaches the opposite mirror.",
+      "formulas": [
+        "\\mathbf{r} = \\mathbf{d} - 2(\\mathbf{d} \\cdot \\hat{\\mathbf{n}})\\,\\hat{\\mathbf{n}}"
+      ],
+      "duration_sec": 3.5,
+      "visual_intent": "The reflected segment from P1 continues growing until it reaches P2 on M2, then a new yellow segment grows away from P2, making the polyline visibly advance one piece at a time rather than appearing all at once. At P2 a perpendicular normal arrow N2, labels P2 and N2, and paired theta_i and theta_r arcs appear, while M1, M2, S, T, and the earlier P1 normal remain in place."
+    },
+    {
+      "id": "node_04",
+      "title": "Angle Sweep and Re-Routing",
+      "description": "As the source rotates, every bounce point slides because each new incoming direction changes the entire recursive path.",
+      "formulas": [
+        "\\mathbf{d}\\cdot\\hat{\\mathbf{n}} = \\|\\mathbf{d}\\|\\cos\\theta_i"
+      ],
+      "duration_sec": 5.0,
+      "visual_intent": "The source S pivots smoothly, and the red-orange-yellow multi-bounce path continuously reroutes between M1 and M2 through labeled contact points P1, P2, P3, P4, and P5 before ending at the target sphere T; the ray segments update as thin colored strokes with arrowheads, never forming a dense laser web. At each active bounce point a short normal arrow N_i remains perpendicular to its mirror, with compact theta_i and theta_r arcs in matched colors so the repeated equality is legible without adding any paragraph text."
+    },
+    {
+      "id": "node_05",
+      "title": "Held Multi-Bounce Solution",
+      "description": "The final launch angle locks in a complete zigzag path from the source to the target.",
+      "formulas": [],
+      "duration_sec": 3.0,
+      "visual_intent": "The optimal path holds steady as a clean five-bounce zigzag from S through P1, P2, P3, P4, and P5 to T, with all arrowheads, normal arrows, point labels, mirror labels, angle labels, and the two teaching mirrors still readable on the softly reflective floor. The camera performs a slow turntable move to a fresh three-quarter angle under the same neutral lighting, preserving the minimal stage with no fog, no black void, and no additional objects."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "user_success_spec_present": false,
+  "user_success_spec": null,
+  "generated": {
+    "version": 1,
+    "rules": [
+      {
+        "kind": "animation_coverage",
+        "anchors": [
+          "incident_white_ray",
+          "internal_ray"
+        ],
+        "source": "generated",
+        "confidence": 0.5,
+        "failure_class": "success_soft",
+        "reason": "storyboard declares non-visibility keyframes",
+        "metadata": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "concept_id": "forward_kinematics_chain",
+  "nodes": [
+    {
+      "id": "node_01",
+      "title": "Rig and Local Frames",
+      "description": "A forward-kinematics chain begins with child segments attached to parent joints, each carrying its own local coordinate frame.",
+      "formulas": [],
+      "duration_sec": 3.0,
+      "visual_intent": "A single three-segment robotic arm stands on a soft floor plane against a neutral gradient background: the base segment is anchored at the origin, the upper arm is attached at colored sphere J1, the forearm is attached at colored sphere J2, and a small marker E sits at the tip. Thin local coordinate arrows are attached at the base/J1 area, at J2, and at E with X red, Y green, Z blue; two soft key lights and one rim light reveal the parenting hierarchy without any factory or black-void environment."
+    },
+    {
+      "id": "node_02",
+      "title": "Parent Rotation Carries Children",
+      "description": "When J1 rotates, every child below it inherits that rotation, so the upper arm, forearm, and end-effector move as one rigid subtree.",
+      "formulas": [
+        "R(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}"
+      ],
+      "duration_sec": 3.8,
+      "visual_intent": "With the same single rig, joint J1 rotates from 0 to 60 degrees while J2 stays at its rest angle; the upper arm sweeps around the base and the forearm plus E follow rigidly, with the attached red-green-blue axes rotating along with the parented segments. A thin colored trajectory curve grows from E in an arc centered on J1, while a compact side panel contains only the label theta_1 and its advancing angle plus the rotation-matrix overlay."
+    },
+    {
+      "id": "node_03",
+      "title": "Child Rotation Has a Local Pivot",
+      "description": "With the parent held fixed, rotating J2 changes only the forearm subtree and makes the end-effector orbit around J2.",
+      "formulas": [],
+      "duration_sec": 3.6,
+      "visual_intent": "The base and upper arm remain frozen at theta_1 = 60 degrees while J2 rotates from 0 to 90 degrees; the forearm pivots about the colored J2 sphere and E draws a second thin curve whose center is visibly J2 rather than the floor origin. The local axes attached at J2 and E swing with the forearm, the base/J1 axes remain fixed, and the only added text is the small theta_2 angle label in the side panel."
+    },
+    {
+      "id": "node_04",
+      "title": "Transform Composition",
+      "description": "The world transform of the end-effector is the ordered product of the base transform, joint rotations, and link offsets.",
+      "formulas": [
+        "T_{\\text{end}} = T_{\\text{base}} \\cdot R_1(\\theta_1) \\cdot L_1 \\cdot R_2(\\theta_2) \\cdot L_2"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "J1 and J2 rotate simultaneously along a smooth keyframed path using Blender object parenting, with segment2 parented to segment1 and segment3 parented to segment2 so the motion comes from the transform stack rather than baked world-space positions. The E trace grows into a more complex curve, and a clean formula overlay floats near the upper right while the camera holds a three-quarter view of the single rig, its three rigid segments, colored joint spheres, and attached local axes."
+    },
+    {
+      "id": "node_05",
+      "title": "End-Effector Pose from Joint Angles",
+      "description": "Forward kinematics evaluates the composed transform to place the end-effector in world space from the known joint angles.",
+      "formulas": [
+        "\\mathbf{p}_{\\text{end}} = T_{\\text{end}} \\cdot \\mathbf{p}_{\\text{local}}"
+      ],
+      "duration_sec": 3.6,
+      "visual_intent": "A clean turntable camera move circles the same single rig as it performs one smooth pick-and-place motion, with J1 sweeping one way and J2 counter-rotating; the persistent E trace remains as a thin smooth curve in space above the soft floor. The final frame holds on the three parented segments, labels J1, J2, and E, the red-green-blue local axes at each joint, and the position formula overlay, making the trace read as the visible result of hierarchical transforms rather than free 3D animation."
+    }
+  ]
+}

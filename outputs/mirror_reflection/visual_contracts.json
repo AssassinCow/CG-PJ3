@@ -1,0 +1,289 @@
+{
+  "node_01": {
+    "shot_id": "node_01",
+    "required_anchors": [
+      "mirror_panel_M1",
+      "mirror_panel_M2",
+      "laser_source_S",
+      "target_sphere_T",
+      "soft_floor_plane",
+      "bounce_points_P1_to_P5",
+      "normal_arrows_N1_to_N5",
+      "multi_bounce_ray_path"
+    ],
+    "required_labels": [
+      "M1 on left",
+      "M2 on right",
+      "thin colored border",
+      "faint sheen"
+    ],
+    "required_vectors": [
+      "normal_arrows_n1_to_n5",
+      "multi_bounce_ray_path",
+      "S",
+      "T"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+      "laser_source_S sits near the front-left side of the stage",
+      "target_sphere_T sits toward the back of the stage",
+      "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+      "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+      "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+      "formula_overlay stays outside the central mirror-and-ray construction"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not show component comparisons without labels.",
+      "Do not abstract away scene anchor: mirror_panel_M1.",
+      "Do not abstract away scene anchor: mirror_panel_M2.",
+      "Do not abstract away scene anchor: laser_source_S.",
+      "Do not abstract away scene anchor: target_sphere_T.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "Do not abstract away scene anchor: bounce_points_P1_to_P5.",
+      "Do not abstract away scene anchor: normal_arrows_N1_to_N5.",
+      "Do not abstract away scene anchor: multi_bounce_ray_path.",
+      "mirror panels replaced by generic glowing planes",
+      "ray path drawn as an unlabeled decorative zigzag",
+      "reflection law shown without normals or equal angle arcs",
+      "source and target omitted in favor of abstract vectors only",
+      "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+      "teaching labels replaced by paragraph text blocks"
+    ]
+  },
+  "node_02": {
+    "shot_id": "node_02",
+    "required_anchors": [
+      "mirror_panel_M1",
+      "mirror_panel_M2",
+      "laser_source_S",
+      "target_sphere_T",
+      "soft_floor_plane",
+      "bounce_points_P1_to_P5",
+      "normal_arrows_N1_to_N5",
+      "multi_bounce_ray_path"
+    ],
+    "required_labels": [
+      "at mirror surface",
+      "theta_i"
+    ],
+    "required_vectors": [
+      "normal_arrows_n1_to_n5",
+      "multi_bounce_ray_path",
+      "S"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+      "laser_source_S sits near the front-left side of the stage",
+      "target_sphere_T sits toward the back of the stage",
+      "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+      "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+      "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+      "formula_overlay stays outside the central mirror-and-ray construction"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: mirror_panel_M1.",
+      "Do not abstract away scene anchor: mirror_panel_M2.",
+      "Do not abstract away scene anchor: laser_source_S.",
+      "Do not abstract away scene anchor: target_sphere_T.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "Do not abstract away scene anchor: bounce_points_P1_to_P5.",
+      "Do not abstract away scene anchor: normal_arrows_N1_to_N5.",
+      "Do not abstract away scene anchor: multi_bounce_ray_path.",
+      "mirror panels replaced by generic glowing planes",
+      "ray path drawn as an unlabeled decorative zigzag",
+      "reflection law shown without normals or equal angle arcs",
+      "source and target omitted in favor of abstract vectors only",
+      "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+      "teaching labels replaced by paragraph text blocks",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_03": {
+    "shot_id": "node_03",
+    "required_anchors": [
+      "mirror_panel_M1",
+      "mirror_panel_M2",
+      "laser_source_S",
+      "target_sphere_T",
+      "soft_floor_plane",
+      "bounce_points_P1_to_P5",
+      "normal_arrows_N1_to_N5",
+      "multi_bounce_ray_path"
+    ],
+    "required_labels": [
+      "P2",
+      "N2",
+      "paired theta_i",
+      "theta_r arcs appear"
+    ],
+    "required_vectors": [
+      "normal_arrows_n1_to_n5",
+      "multi_bounce_ray_path",
+      "S",
+      "T"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+      "laser_source_S sits near the front-left side of the stage",
+      "target_sphere_T sits toward the back of the stage",
+      "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+      "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+      "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+      "formula_overlay stays outside the central mirror-and-ray construction"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: mirror_panel_M1.",
+      "Do not abstract away scene anchor: mirror_panel_M2.",
+      "Do not abstract away scene anchor: laser_source_S.",
+      "Do not abstract away scene anchor: target_sphere_T.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "Do not abstract away scene anchor: bounce_points_P1_to_P5.",
+      "Do not abstract away scene anchor: normal_arrows_N1_to_N5.",
+      "Do not abstract away scene anchor: multi_bounce_ray_path.",
+      "mirror panels replaced by generic glowing planes",
+      "ray path drawn as an unlabeled decorative zigzag",
+      "reflection law shown without normals or equal angle arcs",
+      "source and target omitted in favor of abstract vectors only",
+      "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+      "teaching labels replaced by paragraph text blocks",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_04": {
+    "shot_id": "node_04",
+    "required_anchors": [
+      "mirror_panel_M1",
+      "mirror_panel_M2",
+      "laser_source_S",
+      "target_sphere_T",
+      "soft_floor_plane",
+      "bounce_points_P1_to_P5",
+      "normal_arrows_N1_to_N5",
+      "multi_bounce_ray_path"
+    ],
+    "required_labels": [
+      "contact points P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "required_vectors": [
+      "normal_arrows_n1_to_n5",
+      "multi_bounce_ray_path",
+      "S",
+      "T"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+      "laser_source_S sits near the front-left side of the stage",
+      "target_sphere_T sits toward the back of the stage",
+      "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+      "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+      "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+      "formula_overlay stays outside the central mirror-and-ray construction"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not abstract away scene anchor: mirror_panel_M1.",
+      "Do not abstract away scene anchor: mirror_panel_M2.",
+      "Do not abstract away scene anchor: laser_source_S.",
+      "Do not abstract away scene anchor: target_sphere_T.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "Do not abstract away scene anchor: bounce_points_P1_to_P5.",
+      "Do not abstract away scene anchor: normal_arrows_N1_to_N5.",
+      "Do not abstract away scene anchor: multi_bounce_ray_path.",
+      "mirror panels replaced by generic glowing planes",
+      "ray path drawn as an unlabeled decorative zigzag",
+      "reflection law shown without normals or equal angle arcs",
+      "source and target omitted in favor of abstract vectors only",
+      "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+      "teaching labels replaced by paragraph text blocks",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_05": {
+    "shot_id": "node_05",
+    "required_anchors": [
+      "mirror_panel_M1",
+      "mirror_panel_M2",
+      "laser_source_S",
+      "target_sphere_T",
+      "soft_floor_plane",
+      "bounce_points_P1_to_P5",
+      "normal_arrows_N1_to_N5",
+      "multi_bounce_ray_path"
+    ],
+    "required_labels": [
+      "visible text labels"
+    ],
+    "required_vectors": [
+      "normal_arrows_n1_to_n5",
+      "multi_bounce_ray_path",
+      "S",
+      "T"
+    ],
+    "required_relationships": [
+      "Draw each required vector/arrow as a full visible shaft plus head.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+      "laser_source_S sits near the front-left side of the stage",
+      "target_sphere_T sits toward the back of the stage",
+      "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+      "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+      "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+      "formula_overlay stays outside the central mirror-and-ray construction"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not merge, overlap, or hide distinct vectors/arrows.",
+      "Do not show component comparisons without labels.",
+      "Do not abstract away scene anchor: mirror_panel_M1.",
+      "Do not abstract away scene anchor: mirror_panel_M2.",
+      "Do not abstract away scene anchor: laser_source_S.",
+      "Do not abstract away scene anchor: target_sphere_T.",
+      "Do not abstract away scene anchor: soft_floor_plane.",
+      "Do not abstract away scene anchor: bounce_points_P1_to_P5.",
+      "Do not abstract away scene anchor: normal_arrows_N1_to_N5.",
+      "Do not abstract away scene anchor: multi_bounce_ray_path.",
+      "mirror panels replaced by generic glowing planes",
+      "ray path drawn as an unlabeled decorative zigzag",
+      "reflection law shown without normals or equal angle arcs",
+      "source and target omitted in favor of abstract vectors only",
+      "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+      "teaching labels replaced by paragraph text blocks"
+    ]
+  }
+}

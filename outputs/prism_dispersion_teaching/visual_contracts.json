@@ -1,0 +1,254 @@
+{
+  "node_01": {
+    "shot_id": "node_01",
+    "required_anchors": [
+      "glass_prism",
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray",
+      "projection_screen",
+      "red_screen_dot"
+    ],
+    "required_labels": [],
+    "required_vectors": [
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray"
+    ],
+    "required_relationships": [
+      "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "incident_white_ray enters from the left toward glass_prism",
+      "glass_prism stays centered on dark_matte_optical_bench",
+      "surface_normal_entry is perpendicular to the left prism face at the entry point",
+      "surface_normal_exit is perpendicular to the right prism face at the exit point",
+      "spectrum_red_ray bends least, spectrum_green_ray stays between, and spectrum_blue_ray bends most",
+      "projection_screen stands to the right of glass_prism",
+      "red_screen_dot, green_screen_dot, and blue_screen_dot sit separated on projection_screen at the ray endpoints"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+      "Do not abstract away scene anchor: glass_prism.",
+      "Do not abstract away scene anchor: incident_white_ray.",
+      "Do not abstract away scene anchor: surface_normal_entry.",
+      "Do not abstract away scene anchor: surface_normal_exit.",
+      "Do not abstract away scene anchor: internal_ray.",
+      "Do not abstract away scene anchor: spectrum_red_ray.",
+      "Do not abstract away scene anchor: spectrum_green_ray.",
+      "Do not abstract away scene anchor: spectrum_blue_ray.",
+      "Do not abstract away scene anchor: projection_screen.",
+      "Do not abstract away scene anchor: red_screen_dot.",
+      "glass_prism replaced by a flat opaque triangle",
+      "projection_screen replaced by a blank glowing rectangle with no RGB dots",
+      "RGB rays collapsed into one white or rainbow smear",
+      "surface normals shown as generic axes unrelated to prism faces",
+      "formula blocks floating over the center of the prism",
+      "optical bench removed into a pure black void",
+      "decorative abstract particles substituted for the actual ray geometry"
+    ]
+  },
+  "node_02": {
+    "shot_id": "node_02",
+    "required_anchors": [
+      "glass_prism",
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray",
+      "projection_screen",
+      "red_screen_dot"
+    ],
+    "required_labels": [
+      "sit beside geometry"
+    ],
+    "required_vectors": [
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray"
+    ],
+    "required_relationships": [
+      "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "incident_white_ray enters from the left toward glass_prism",
+      "glass_prism stays centered on dark_matte_optical_bench",
+      "surface_normal_entry is perpendicular to the left prism face at the entry point",
+      "surface_normal_exit is perpendicular to the right prism face at the exit point",
+      "spectrum_red_ray bends least, spectrum_green_ray stays between, and spectrum_blue_ray bends most",
+      "projection_screen stands to the right of glass_prism",
+      "red_screen_dot, green_screen_dot, and blue_screen_dot sit separated on projection_screen at the ray endpoints"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+      "Do not abstract away scene anchor: glass_prism.",
+      "Do not abstract away scene anchor: incident_white_ray.",
+      "Do not abstract away scene anchor: surface_normal_entry.",
+      "Do not abstract away scene anchor: surface_normal_exit.",
+      "Do not abstract away scene anchor: internal_ray.",
+      "Do not abstract away scene anchor: spectrum_red_ray.",
+      "Do not abstract away scene anchor: spectrum_green_ray.",
+      "Do not abstract away scene anchor: spectrum_blue_ray.",
+      "Do not abstract away scene anchor: projection_screen.",
+      "Do not abstract away scene anchor: red_screen_dot.",
+      "glass_prism replaced by a flat opaque triangle",
+      "projection_screen replaced by a blank glowing rectangle with no RGB dots",
+      "RGB rays collapsed into one white or rainbow smear",
+      "surface normals shown as generic axes unrelated to prism faces",
+      "formula blocks floating over the center of the prism",
+      "optical bench removed into a pure black void",
+      "decorative abstract particles substituted for the actual ray geometry",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_03": {
+    "shot_id": "node_03",
+    "required_anchors": [
+      "glass_prism",
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray",
+      "projection_screen",
+      "red_screen_dot"
+    ],
+    "required_labels": [
+      "\u201d \u201cgreen",
+      "\u201cblue\u201d their rays"
+    ],
+    "required_vectors": [
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray"
+    ],
+    "required_relationships": [
+      "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "incident_white_ray enters from the left toward glass_prism",
+      "glass_prism stays centered on dark_matte_optical_bench",
+      "surface_normal_entry is perpendicular to the left prism face at the entry point",
+      "surface_normal_exit is perpendicular to the right prism face at the exit point",
+      "spectrum_red_ray bends least, spectrum_green_ray stays between, and spectrum_blue_ray bends most",
+      "projection_screen stands to the right of glass_prism",
+      "red_screen_dot, green_screen_dot, and blue_screen_dot sit separated on projection_screen at the ray endpoints"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [
+      "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+    ],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+      "Do not show component comparisons without labels.",
+      "Do not abstract away scene anchor: glass_prism.",
+      "Do not abstract away scene anchor: incident_white_ray.",
+      "Do not abstract away scene anchor: surface_normal_entry.",
+      "Do not abstract away scene anchor: surface_normal_exit.",
+      "Do not abstract away scene anchor: internal_ray.",
+      "Do not abstract away scene anchor: spectrum_red_ray.",
+      "Do not abstract away scene anchor: spectrum_green_ray.",
+      "Do not abstract away scene anchor: spectrum_blue_ray.",
+      "Do not abstract away scene anchor: projection_screen.",
+      "Do not abstract away scene anchor: red_screen_dot.",
+      "glass_prism replaced by a flat opaque triangle",
+      "projection_screen replaced by a blank glowing rectangle with no RGB dots",
+      "RGB rays collapsed into one white or rainbow smear",
+      "surface normals shown as generic axes unrelated to prism faces",
+      "formula blocks floating over the center of the prism",
+      "optical bench removed into a pure black void",
+      "decorative abstract particles substituted for the actual ray geometry",
+      "Do not place the main subject or labels under the formula overlay."
+    ]
+  },
+  "node_04": {
+    "shot_id": "node_04",
+    "required_anchors": [
+      "glass_prism",
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray",
+      "projection_screen",
+      "red_screen_dot"
+    ],
+    "required_labels": [
+      "\u201cscreen\u201d beside projection_screen"
+    ],
+    "required_vectors": [
+      "incident_white_ray",
+      "surface_normal_entry",
+      "surface_normal_exit",
+      "internal_ray",
+      "spectrum_red_ray",
+      "spectrum_green_ray",
+      "spectrum_blue_ray"
+    ],
+    "required_relationships": [
+      "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+      "Keep distinct vector/ray cues spatially separated enough to read individually.",
+      "Lay compared components out with clear separation and stable ordering.",
+      "incident_white_ray enters from the left toward glass_prism",
+      "glass_prism stays centered on dark_matte_optical_bench",
+      "surface_normal_entry is perpendicular to the left prism face at the entry point",
+      "surface_normal_exit is perpendicular to the right prism face at the exit point",
+      "spectrum_red_ray bends least, spectrum_green_ray stays between, and spectrum_blue_ray bends most",
+      "projection_screen stands to the right of glass_prism",
+      "red_screen_dot, green_screen_dot, and blue_screen_dot sit separated on projection_screen at the ray endpoints"
+    ],
+    "emphasis_points": [],
+    "overlay_constraints": [],
+    "forbidden_failures": [
+      "Do not omit required labels or make them too small to read.",
+      "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+      "Do not show component comparisons without labels.",
+      "Do not abstract away scene anchor: glass_prism.",
+      "Do not abstract away scene anchor: incident_white_ray.",
+      "Do not abstract away scene anchor: surface_normal_entry.",
+      "Do not abstract away scene anchor: surface_normal_exit.",
+      "Do not abstract away scene anchor: internal_ray.",
+      "Do not abstract away scene anchor: spectrum_red_ray.",
+      "Do not abstract away scene anchor: spectrum_green_ray.",
+      "Do not abstract away scene anchor: spectrum_blue_ray.",
+      "Do not abstract away scene anchor: projection_screen.",
+      "Do not abstract away scene anchor: red_screen_dot.",
+      "glass_prism replaced by a flat opaque triangle",
+      "projection_screen replaced by a blank glowing rectangle with no RGB dots",
+      "RGB rays collapsed into one white or rainbow smear",
+      "surface normals shown as generic axes unrelated to prism faces",
+      "formula blocks floating over the center of the prism",
+      "optical bench removed into a pure black void",
+      "decorative abstract particles substituted for the actual ray geometry"
+    ]
+  }
+}

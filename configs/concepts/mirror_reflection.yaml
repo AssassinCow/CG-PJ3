@@ -1,0 +1,92 @@
+concept_id: mirror_reflection
+title: Specular Reflection and Multi-Bounce Light Paths
+target_audience: undergraduate computer graphics students
+duration_sec: 18.0
+scene_profile: vector_teaching
+key_points:
+  - >-
+    Establish the stage: two flat parallel mirror panels stand
+    upright on a soft floor plane, facing each other. A clearly
+    visible laser source S sits on one side. The two mirrors are
+    labeled M1 and M2. A small target sphere T sits in the back of
+    the stage. No light is drawn yet, only the geometric setup.
+  - >-
+    Demonstrate one reflection: the laser fires from S, hits M1 at
+    point P1, and reflects off it. The incoming ray and reflected
+    ray are drawn as thin colored segments with arrows. A short
+    normal arrow N1 is attached at P1, and the incidence angle
+    theta_i and reflection angle theta_r are labeled and shown to
+    be equal. The reflection-law formula overlay appears.
+  - >-
+    Extend to a second bounce: the reflected ray hits M2 at point
+    P2 and bounces again. The polyline of the light path is revealed
+    segment by segment, not all at once. Each segment grows via a
+    bevel_factor_end keyframe so the viewer literally watches the
+    light advance through the scene.
+  - >-
+    Sweep the source angle: gradually rotate S so the launch
+    direction changes. The full multi-bounce path P1 P2 P3 ... T
+    re-routes in real time. Show four to six total bounces ending
+    at the target T. The persistent normal arrows at each bounce
+    visualize the reflection law at each contact.
+  - >-
+    Final composite: hold the optimal launch angle so the path
+    elegantly connects S to T through all bounces. A slow turntable
+    camera move shows the full zigzag from a fresh angle. The path,
+    the mirrors, the normals, and the angle labels remain visible
+    and readable.
+must_show_formulas:
+  - "\\theta_i = \\theta_r"
+  - "\\mathbf{r} = \\mathbf{d} - 2(\\mathbf{d} \\cdot \\hat{\\mathbf{n}})\\,\\hat{\\mathbf{n}}"
+  - "\\mathbf{d}\\cdot\\hat{\\mathbf{n}} = \\|\\mathbf{d}\\|\\cos\\theta_i"
+visual_style_constraints:
+  - >-
+    Keep the geometry minimal: exactly two mirror panels M1, M2, one
+    source S, one target sphere T. Do not add decorative walls,
+    prisms, or extra reflectors. The story is the light path, not
+    the room.
+  - >-
+    Draw each light segment as a thin bright colored cylinder or
+    grease-pencil stroke (red, orange, or yellow) with a small
+    arrowhead on each segment. Reveal segments sequentially using
+    bevel_factor_end keyframes so the path grows over time, not all
+    at once.
+  - >-
+    At each bounce point P_i, draw a short normal arrow N_i
+    perpendicular to the mirror surface, and two short angle arcs
+    labeled theta_i and theta_r with one explicit equals sign or
+    matched arc color so the equality is unambiguous.
+  - >-
+    Mirror panels should look like teaching mirrors, not photoreal
+    glass: a clean flat rectangle with a thin colored border and a
+    faint reflective sheen. No environment fog, no laser smoke
+    volumetrics, no sci-fi atmosphere.
+  - >-
+    Use a clean teaching scene: soft floor with a subtle reflection,
+    neutral gradient background, two soft key lights. No black void,
+    no dense laser web, no cinematic haze.
+  - >-
+    Labels S, T, M1, M2, P1...Pn, N_i, theta_i, theta_r and the
+    formula overlay are the only text. Do not paste paragraph text
+    inside the 3D scene.
+graphics_principles:
+  - >-
+    Specular reflection sends each incoming ray to a single outgoing
+    direction determined by the surface normal: the angle of
+    incidence equals the angle of reflection, both measured from
+    the normal.
+  - >-
+    The reflection vector formula r = d - 2(d.n)n is the workhorse
+    used in real-time rendering for environment mapping, screen-
+    space reflections, and the secondary rays in classical ray
+    tracing.
+  - >-
+    Multi-bounce paths between parallel mirrors generalize directly
+    to recursive Whitted ray tracing: each bounce is one level of
+    recursion, and the path budget is the maximum recursion depth.
+  - >-
+    The dynamic content is essential here: a static diagram cannot
+    show the path being constructed bounce by bounce or the global
+    re-routing when the source angle changes, but those two
+    behaviors are what makes reflection feel like a physical rule
+    rather than a memorized formula.

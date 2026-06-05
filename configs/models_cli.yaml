@@ -1,0 +1,44 @@
+# Per-agent model assignment. Override via env (`CG_TUTOR_MODELS_YAML`)
+# or per-invocation CLI flags (`--coder`, `--storyboard`, etc).
+#
+# The default routing uses local CLI providers. This keeps us on the
+# original path that already worked on this machine: `claude` and
+# `codex` read their auth from the installed CLI configs.
+#
+# Each agent may specify a `fallback` slug. The LLM client tries
+# `primary` first; if it raises an exception (timeout, non-zero exit,
+# unparseable response), the client retries on `fallback`. Set
+# `fallback: null` to disable fallback for a stage.
+
+agents:
+  concept_decomposer:
+    # Structured teaching outline. GPT-5.5 via Codex CLI is the default.
+    primary: codex-cli/gpt-5.5
+    fallback: claude-cli/sonnet
+  scene_profile:
+    # Lightweight style-policy generation/completion.
+    primary: codex-cli/gpt-5.5
+    fallback: claude-cli/sonnet
+  storyboard:
+    # Schema-sensitive and visual planning. Keep it on Sonnet by default.
+    primary: codex-cli/sonnet
+    fallback: codex-cli/gpt-5.5
+  blender_coder:
+    # Long bpy script synthesis is the hardest code-generation step.
+    # Use Opus through Claude CLI, with Codex as the fallback.
+    primary: claude-cli/opus
+    fallback: codex-cli/gpt-5.5
+  render_critic:
+    # Vision critic uses Claude CLI so it can load PNG files locally.
+    primary: claude-cli/sonnet
+    fallback: codex-cli/gpt-5.5
+  latex_overlay:
+    primary: null                   # deterministic, no LLM call
+    fallback: null
+
+# Default decoding settings (applied to SDK providers; CLI providers
+# ignore most of these because the CLI wrapper sets them).
+defaults:
+  temperature: null
+  max_output_tokens: null
+  response_format: json

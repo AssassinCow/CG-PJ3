@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "kind": "animation_coverage",
+      "anchors": [
+        "base_segment",
+        "end_effector_e_marker"
+      ],
+      "source": "generated",
+      "confidence": 0.5,
+      "failure_class": "success_soft",
+      "reason": "storyboard declares non-visibility keyframes",
+      "metadata": {}
+    }
+  ]
+}

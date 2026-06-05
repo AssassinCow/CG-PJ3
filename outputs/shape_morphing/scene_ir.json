@@ -1,0 +1,507 @@
+{
+  "concept_id": "shape_morphing",
+  "fps": 24,
+  "resolution": [
+    960,
+    540
+  ],
+  "scene_profile_id": "shape_morphing_vertex_blend",
+  "scene_profile_base": "transformation_demo",
+  "shots": [
+    {
+      "node_id": "node_01",
+      "start_sec": 0.0,
+      "duration_sec": 3.5,
+      "visual_intent": "A sharp cube-shaped hero mesh sits centered on a soft gradient floor, built from a subdivided cube or UV-sphere-like topology rather than separate cube geometry; about 20 selected vertices glow as small dots on corners, edges, and face centers. The camera holds a three-quarter view under two soft key lights and a faint rim light, with only the floating label \"shape A\" beside the mesh against a neutral gradient background.",
+      "narrative": "We begin with a single mesh whose fixed vertex set will be reused for every target shape.",
+      "formula": null,
+      "caption": "We begin with a single mesh whose fixed vertex set will be reused for every target shape.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "grounded_environment",
+          "priority": "hard",
+          "requires": [],
+          "relationships": [],
+          "forbidden": [
+            "cube sphere capsule and star shown as separate side-by-side objects",
+            "shape morphing represented as a hard cut instead of continuous vertex motion",
+            "target shapes generated with different vertex counts or inconsistent indexing",
+            "rounded star replaced by a torus or any hole-bearing topology",
+            "all vertices covered with markers until the surface becomes unreadable",
+            "generic transformation classroom axes overpowering the morphing mesh",
+            "black void or foggy sci-fi stage replacing the soft teaching floor"
+          ],
+          "natural_language_contract": "Build recognizable scene anchors before transient effects."
+        },
+        {
+          "slot_type": "custom",
+          "priority": "hard",
+          "requires": [
+            "shape A",
+            "visible ray/vector cues"
+          ],
+          "relationships": [
+            "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+            "Lay compared components out with clear separation and stable ordering."
+          ],
+          "forbidden": [
+            "Do not omit required labels or make them too small to read.",
+            "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+            "Do not show component comparisons without labels."
+          ],
+          "natural_language_contract": "Derived visual contract requirements that do not fit a more specific slot."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_01",
+        "required_anchors": [],
+        "required_labels": [
+          "shape A"
+        ],
+        "required_vectors": [
+          "visible ray/vector cues"
+        ],
+        "required_relationships": [
+          "Represent ray/vector cues as thin glowing curve_polyline or dotted tracers, not thick arrow primitives.",
+          "Lay compared components out with clear separation and stable ordering."
+        ],
+        "emphasis_points": [],
+        "overlay_constraints": [],
+        "forbidden_failures": [
+          "Do not omit required labels or make them too small to read.",
+          "Do not use thick arrows, arrow primitives, visible light bars, or foreground light panels.",
+          "Do not show component comparisons without labels."
+        ]
+      }
+    },
+    {
+      "node_id": "node_02",
+      "start_sec": 3.5,
+      "duration_sec": 5.0,
+      "visual_intent": "The same single hero mesh continuously rounds from cube to sphere while the sampled vertex dots slide along straight paths, and thin pale trajectory segments connect each dot's cube start position to its sphere target position before fading near the end. A small clean side panel contains the formula overlay and a horizontal \"t\" slider moving from 0 to 1, while the label updates to \"shape A -> shape B\" with \"shape B\" referring to the sphere target.",
+      "narrative": "Each vertex moves from its cube position toward the matching sphere position as the blend parameter increases.",
+      "formula": "\\mathbf{V}(t) = (1-t)\\,\\mathbf{V}_A + t\\,\\mathbf{V}_B, \\quad t \\in [0,1]",
+      "caption": "Each vertex moves from its cube position toward the matching sphere position as the blend parameter increases.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "comparison_state",
+          "priority": "hard",
+          "requires": [
+            "reference_state",
+            "current_state"
+          ],
+          "relationships": [
+            "reference and current states are visible in the same shot or with stable continuity",
+            "differences are spatially aligned enough to compare"
+          ],
+          "forbidden": [
+            "Do not replace comparison with a single unlabelled state."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "grounded_environment",
+          "priority": "hard",
+          "requires": [],
+          "relationships": [],
+          "forbidden": [
+            "cube sphere capsule and star shown as separate side-by-side objects",
+            "shape morphing represented as a hard cut instead of continuous vertex motion",
+            "target shapes generated with different vertex counts or inconsistent indexing",
+            "rounded star replaced by a torus or any hole-bearing topology",
+            "all vertices covered with markers until the surface becomes unreadable",
+            "generic transformation classroom axes overpowering the morphing mesh",
+            "black void or foggy sci-fi stage replacing the soft teaching floor"
+          ],
+          "natural_language_contract": "Build recognizable scene anchors before transient effects."
+        },
+        {
+          "slot_type": "custom",
+          "priority": "hard",
+          "requires": [
+            "shape A -> shape B",
+            "shape B"
+          ],
+          "relationships": [],
+          "forbidden": [
+            "Do not omit required labels or make them too small to read.",
+            "Do not place the main subject or labels under the formula overlay."
+          ],
+          "natural_language_contract": "Derived visual contract requirements that do not fit a more specific slot."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_02",
+        "required_anchors": [],
+        "required_labels": [
+          "shape A -> shape B",
+          "shape B"
+        ],
+        "required_vectors": [],
+        "required_relationships": [],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not omit required labels or make them too small to read.",
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    },
+    {
+      "node_id": "node_03",
+      "start_sec": 8.5,
+      "duration_sec": 4.0,
+      "visual_intent": "From the completed sphere, the single mesh elongates upward into a rounded capsule using the same visible sample dots and the same indexed surface grid, with no duplicate reference mesh and no holes or topology changes. The camera slowly arcs around the object so the viewer sees the dots maintain their relative ordering on the surface while the side panel resets \"t\" from 0 to 1 for the capsule target.",
+      "narrative": "The morph stays smooth because vertex i in one shape always blends to vertex i in the next shape.",
+      "formula": "\\mathbf{V}_i(t) = \\mathbf{V}_i^A + t\\,(\\mathbf{V}_i^B - \\mathbf{V}_i^A)",
+      "caption": "The morph stays smooth because vertex i in one shape always blends to vertex i in the next shape.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "grounded_environment",
+          "priority": "hard",
+          "requires": [],
+          "relationships": [],
+          "forbidden": [
+            "cube sphere capsule and star shown as separate side-by-side objects",
+            "shape morphing represented as a hard cut instead of continuous vertex motion",
+            "target shapes generated with different vertex counts or inconsistent indexing",
+            "rounded star replaced by a torus or any hole-bearing topology",
+            "all vertices covered with markers until the surface becomes unreadable",
+            "generic transformation classroom axes overpowering the morphing mesh",
+            "black void or foggy sci-fi stage replacing the soft teaching floor"
+          ],
+          "natural_language_contract": "Build recognizable scene anchors before transient effects."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_03",
+        "required_anchors": [],
+        "required_labels": [],
+        "required_vectors": [],
+        "required_relationships": [],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    },
+    {
+      "node_id": "node_04",
+      "start_sec": 12.5,
+      "duration_sec": 5.5,
+      "visual_intent": "The capsule compresses and spreads into a flattened rounded star or rounded diamond silhouette, still as the same hero mesh with the same sparse vertex dots riding on the surface; the side panel shows the formula overlay with simple weight bars and the active \"t\" indicator, but no extra mesh copies. For the finale the mesh snaps back to the sharp cube pose, holds for a beat, then loops rapidly through sphere, capsule, and rounded star during a smooth turntable camera move, with liquid-metal shading during motion and crisp cube edges at the loop boundary.",
+      "narrative": "Blendshape animation generalizes this idea by weighting several compatible target poses of the same mesh.",
+      "formula": "\\mathbf{V}(t) = \\sum_{k=0}^{n-1} w_k(t)\\,\\mathbf{V}_k, \\quad \\sum_k w_k(t) = 1",
+      "caption": "Blendshape animation generalizes this idea by weighting several compatible target poses of the same mesh.",
+      "expected_objects": [
+        {
+          "name": "key_light",
+          "object_type": "light",
+          "primitive": null,
+          "role": "light",
+          "required": true
+        },
+        {
+          "name": "hero_mesh",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "source_shape_A",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "target_shape_B",
+          "object_type": "primitive",
+          "primitive": "cube",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "sample_vertex_marker",
+          "object_type": "primitive",
+          "primitive": "sphere",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "trajectory_trace",
+          "object_type": "mesh",
+          "primitive": "curve_polyline",
+          "role": "visual",
+          "required": true
+        },
+        {
+          "name": "parameter_panel",
+          "object_type": "primitive",
+          "primitive": "plane",
+          "role": "visual",
+          "required": true
+        }
+      ],
+      "requirement_slots": [
+        {
+          "slot_type": "ray_path",
+          "priority": "hard",
+          "requires": [
+            "ray_path",
+            "surface_or_medium",
+            "interaction_point"
+          ],
+          "relationships": [
+            "ray path visibly meets the reflecting/refracting surface",
+            "secondary rays branch from the interaction point when shown"
+          ],
+          "forbidden": [
+            "Do not draw rays floating independently of scene geometry."
+          ],
+          "natural_language_contract": ""
+        },
+        {
+          "slot_type": "grounded_environment",
+          "priority": "hard",
+          "requires": [],
+          "relationships": [],
+          "forbidden": [
+            "cube sphere capsule and star shown as separate side-by-side objects",
+            "shape morphing represented as a hard cut instead of continuous vertex motion",
+            "target shapes generated with different vertex counts or inconsistent indexing",
+            "rounded star replaced by a torus or any hole-bearing topology",
+            "all vertices covered with markers until the surface becomes unreadable",
+            "generic transformation classroom axes overpowering the morphing mesh",
+            "black void or foggy sci-fi stage replacing the soft teaching floor"
+          ],
+          "natural_language_contract": "Build recognizable scene anchors before transient effects."
+        }
+      ],
+      "visual_contract": {
+        "shot_id": "node_04",
+        "required_anchors": [],
+        "required_labels": [],
+        "required_vectors": [],
+        "required_relationships": [],
+        "emphasis_points": [],
+        "overlay_constraints": [
+          "Reserve overlay zone x=0.56, y=0.07, w=0.36, h=0.18; keep key objects and labels outside it."
+        ],
+        "forbidden_failures": [
+          "Do not place the main subject or labels under the formula overlay."
+        ]
+      }
+    }
+  ]
+}

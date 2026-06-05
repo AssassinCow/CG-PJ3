@@ -1,0 +1,84 @@
+concept_id: shape_morphing
+title: Shape Morphing via Vertex Blending
+target_audience: undergraduate computer graphics students
+duration_sec: 18.0
+scene_profile: transformation_demo
+key_points:
+  - >-
+    Establish the base shape: a single hero mesh starts as a sharp
+    cube centered on a soft floor plane. Its vertices are highlighted
+    with small dots so the viewer sees the discrete vertex set that
+    will be blended. A label "shape A" floats next to it.
+  - >-
+    Show the linear vertex blend formula and the first morph: the
+    cube continuously deforms into a sphere of the same vertex count
+    using V(t) = (1-t)*A + t*B. The vertex dots travel along straight
+    lines from cube positions to sphere positions. The blend parameter
+    t advances visibly in a small side panel. Label updates to
+    "shape A -> shape B (sphere)".
+  - >-
+    Demonstrate a second morph stage: the sphere then morphs into an
+    elongated capsule, then into a flattened rounded star or rounded
+    diamond silhouette made from the same sphere-like topology. Each
+    transition is smooth and animated, the side panel shows the current
+    target shape and t.
+  - >-
+    Show the per-vertex trajectory traces: during the cube-to-sphere
+    morph draw thin lines from each vertex's start to its target
+    position so the viewer literally sees the interpolation. These
+    traces fade out after the transition completes.
+  - >-
+    Final composite: the hero mesh returns to the cube, then loops
+    once more through sphere -> capsule -> rounded star in a faster
+    turntable camera move. The morph looks liquid-metal smooth, while
+    the cube pose is held sharply at the loop boundary, emphasizing the
+    contrast between discrete pose states and continuous vertex
+    interpolation.
+must_show_formulas:
+  - "\\mathbf{V}(t) = (1-t)\\,\\mathbf{V}_A + t\\,\\mathbf{V}_B, \\quad t \\in [0,1]"
+  - "\\mathbf{V}_i(t) = \\mathbf{V}_i^A + t\\,(\\mathbf{V}_i^B - \\mathbf{V}_i^A)"
+  - "\\mathbf{V}(t) = \\sum_{k=0}^{n-1} w_k(t)\\,\\mathbf{V}_k, \\quad \\sum_k w_k(t) = 1"
+visual_style_constraints:
+  - >-
+    Keep exactly one hero mesh on screen throughout. Do not duplicate
+    the mesh into side-by-side copies; the morph itself is the visual
+    story.
+  - >-
+    All target shapes must share the same vertex count and vertex
+    indexing so the linear blend is well defined. Cube, sphere,
+    capsule, and rounded star should all use the same UV-sphere or
+    subdivided-cube topology, deformed into their target silhouettes.
+    Do not create a true torus or any shape with a hole, because that
+    would change topology and break the one-to-one vertex
+    correspondence.
+  - >-
+    During the morph, show small dots (or short trajectory lines) on
+    a sparse subset of vertices so the per-vertex interpolation is
+    visible. Do not draw a dot on every vertex; pick about 20 sample
+    points to keep the scene readable.
+  - >-
+    Use a clean teaching scene: soft floor with a subtle gradient,
+    neutral gradient background, two soft key lights, one rim light.
+    No black void, no sci-fi fog, no laser webs.
+  - >-
+    Labels shape A, shape B, t, and the formula overlay are the only
+    text. Do not write long paragraphs inside the 3D scene.
+graphics_principles:
+  - >-
+    Shape morphing is per-vertex linear interpolation between
+    corresponding vertices of two meshes that share topology. It is
+    the foundation of blendshape (shape key) facial animation.
+  - >-
+    Smooth morphing requires identical vertex count and consistent
+    vertex ordering between source and target shapes; topology
+    mismatch causes self-intersection and tearing.
+  - >-
+    Generalized blendshapes weight multiple targets simultaneously
+    using a convex combination, which is how facial rigs express
+    expressions as linear combinations of phoneme and emotion
+    targets.
+  - >-
+    The dynamic transition itself is the pedagogical content: the
+    same mesh expressing several distinct silhouettes through
+    continuous vertex interpolation shows why blendshape rigs
+    dominate production facial animation.

@@ -1,0 +1,1385 @@
+{
+  "concept_id": "mirror_reflection",
+  "fps": 24,
+  "resolution": [
+    960,
+    540
+  ],
+  "shots": [
+    {
+      "node_id": "node_01",
+      "start_sec": 0.0,
+      "duration_sec": 2.5,
+      "camera": [
+        {
+          "time_sec": 0.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 2.5,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m1",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m2",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "laser_source_s",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.0,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "target_sphere_t",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.0,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        },
+        {
+          "name": "bounce_points_p1_to_p5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            2.0,
+            -0.2,
+            1.32
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "normal_arrows_n1_to_n5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 2.05,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "multi_bounce_ray_path",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 0.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 2.05,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "We begin with only the geometry: two parallel teaching mirrors, a source, and a target."
+    },
+    {
+      "node_id": "node_02",
+      "start_sec": 2.5,
+      "duration_sec": 4.0,
+      "camera": [
+        {
+          "time_sec": 2.5,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 6.5,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m1",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m2",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "laser_source_s",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.15,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "target_sphere_t",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.15,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        },
+        {
+          "name": "bounce_points_p1_to_p5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            2.15,
+            -0.2,
+            1.32
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "normal_arrows_n1_to_n5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 2.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 5.78,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "multi_bounce_ray_path",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 2.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 5.78,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "\\theta_i = \\theta_r",
+      "caption": "At the first contact point, the outgoing direction is fixed by equal angles around the surface normal."
+    },
+    {
+      "node_id": "node_03",
+      "start_sec": 6.5,
+      "duration_sec": 3.5,
+      "camera": [
+        {
+          "time_sec": 6.5,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 10.0,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m1",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m2",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "laser_source_s",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.3,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "target_sphere_t",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.3,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        },
+        {
+          "name": "bounce_points_p1_to_p5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            2.3,
+            -0.2,
+            1.32
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "normal_arrows_n1_to_n5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 6.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 9.37,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "multi_bounce_ray_path",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 6.5,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 9.37,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "\\mathbf{r} = \\mathbf{d} - 2(\\mathbf{d} \\cdot \\hat{\\mathbf{n}})\\,\\hat{\\mathbf{n}}",
+      "caption": "The same local normal rule computes the next reflected direction after the ray reaches the opposite mirror."
+    },
+    {
+      "node_id": "node_04",
+      "start_sec": 10.0,
+      "duration_sec": 5.0,
+      "camera": [
+        {
+          "time_sec": 10.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 15.0,
+          "position": [
+            -0.3,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            -0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m1",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m2",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "laser_source_s",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.45,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "target_sphere_t",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.45,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        },
+        {
+          "name": "bounce_points_p1_to_p5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            2.45,
+            -0.2,
+            1.32
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "normal_arrows_n1_to_n5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 10.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 14.1,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "multi_bounce_ray_path",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 10.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 14.1,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        }
+      ],
+      "overlay_zone": {
+        "x": 0.56,
+        "y": 0.07,
+        "w": 0.36,
+        "h": 0.18
+      },
+      "formula": "\\mathbf{d}\\cdot\\hat{\\mathbf{n}} = \\|\\mathbf{d}\\|\\cos\\theta_i",
+      "caption": "As the source rotates, every bounce point slides because each new incoming direction changes the entire recursive path."
+    },
+    {
+      "node_id": "node_05",
+      "start_sec": 15.0,
+      "duration_sec": 3.0,
+      "camera": [
+        {
+          "time_sec": 15.0,
+          "position": [
+            0.0,
+            -7.0,
+            3.2
+          ],
+          "look_at": [
+            0.0,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        },
+        {
+          "time_sec": 18.0,
+          "position": [
+            0.8,
+            -6.88,
+            3.26
+          ],
+          "look_at": [
+            0.08,
+            0.0,
+            0.9
+          ],
+          "fov": 48.0
+        }
+      ],
+      "objects": [
+        {
+          "name": "key_light",
+          "type": "light",
+          "primitive": null,
+          "location": [
+            0.0,
+            -3.5,
+            5.0
+          ],
+          "properties": {
+            "light_kind": "AREA",
+            "energy": 650,
+            "size": 5.0,
+            "light_color": [
+              1.0,
+              0.96,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m1",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "mirror_panel_m2",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            2.4,
+            0.05,
+            1.45
+          ],
+          "properties": {
+            "size": 1.2,
+            "color": [
+              0.08,
+              0.11,
+              0.14
+            ],
+            "alpha": 0.35
+          },
+          "keyframes": []
+        },
+        {
+          "name": "laser_source_s",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.6,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "target_sphere_t",
+          "type": "primitive",
+          "primitive": "cube",
+          "location": [
+            2.6,
+            0.0,
+            1.0
+          ],
+          "properties": {
+            "size": 0.8,
+            "color": [
+              0.95,
+              0.35,
+              0.25
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "soft_floor_plane",
+          "type": "primitive",
+          "primitive": "plane",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "size": 6.0,
+            "color": [
+              0.55,
+              0.75,
+              1.0
+            ],
+            "alpha": 0.18
+          },
+          "keyframes": []
+        },
+        {
+          "name": "bounce_points_p1_to_p5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            2.6,
+            -0.2,
+            1.32
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.2,
+              0.65,
+              0.9
+            ]
+          },
+          "keyframes": []
+        },
+        {
+          "name": "normal_arrows_n1_to_n5",
+          "type": "primitive",
+          "primitive": "sphere",
+          "location": [
+            -1.2,
+            -0.35,
+            1.16
+          ],
+          "properties": {
+            "radius": 0.08,
+            "color": [
+              0.32,
+              0.65,
+              0.8
+            ]
+          },
+          "keyframes": [
+            {
+              "time_sec": 15.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 17.46,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        },
+        {
+          "name": "multi_bounce_ray_path",
+          "type": "mesh",
+          "primitive": "curve_polyline",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "properties": {
+            "points": [
+              [
+                2.0,
+                0.25,
+                1.35
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                -2.0,
+                -0.25,
+                0.95
+              ]
+            ],
+            "bevel_depth": 0.012,
+            "color": [
+              0.2,
+              0.75,
+              1.0
+            ],
+            "emission": 0.6
+          },
+          "keyframes": [
+            {
+              "time_sec": 15.0,
+              "attr": "scale",
+              "value": [
+                0.72,
+                0.72,
+                0.72
+              ]
+            },
+            {
+              "time_sec": 17.46,
+              "attr": "scale",
+              "value": [
+                1.08,
+                1.08,
+                1.08
+              ]
+            }
+          ]
+        }
+      ],
+      "overlay_zone": null,
+      "formula": null,
+      "caption": "The final launch angle locks in a complete zigzag path from the source to the target."
+    }
+  ]
+}

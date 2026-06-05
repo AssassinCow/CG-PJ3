@@ -1,0 +1,62 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.DS_Store
+
+outputs/*
+!outputs/.gitkeep
+!outputs/*/
+outputs/*/*
+!outputs/*/critic_best.json
+!outputs/*/narrative.json
+!outputs/*/scene.compiled.py
+!outputs/*/scene.py
+!outputs/*/scene_ir.json
+!outputs/*/scene_profile.json
+!outputs/*/storyboard.json
+!outputs/*/success_spec.effective.json
+!outputs/*/success_spec.generated.json
+!outputs/*/success_spec.validation.json
+!outputs/*/video_exports.json
+!outputs/*/visual_contracts.json
+!outputs/*/*.mp4
+outputs_*/
+outputs_w3_*/
+outputs_best/
+outputs_*_/
+backups/
+Project3说明_2026.pptx
+
+# Build / sandbox dirs
+build/
+dist/
+*.egg-info/
+
+# Editor / OS
+.vscode/
+.idea/
+.ipynb_checkpoints/
+~$*.pptx
+~$*.docx
+~$*.xlsx
+
+# Pipeline runtime
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Blender backup files
+*.blend1
+*.blend@
+
+# Reports build artefacts
+report/*.pdf
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
+report/*.fls
+report/*.fdb_latexmk

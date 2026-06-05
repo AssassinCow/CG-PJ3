@@ -1,0 +1,93 @@
+{
+  "profile_id": "affine_transformation_3d",
+  "base_profile": "transformation_demo",
+  "visual_goal": "Show a blue cube undergoing translation, z-axis rotation, uniform scale, and order-dependent composition on a readable 3D grid with formulas and before/after correspondence kept clear.",
+  "allowed_helpers": [
+    "axes",
+    "axis_labels",
+    "grid",
+    "ghost_objects",
+    "before_after_labels",
+    "motion_trails",
+    "formula_overlay",
+    "displacement_arrow",
+    "angle_arc",
+    "right_hand_rule_hand",
+    "vertex_correspondence_lines",
+    "scale_direction_rays",
+    "split_viewports",
+    "dashed_comparison_line"
+  ],
+  "forbidden_helpers": [
+    "unlabeled_axes",
+    "ambiguous_before_after_state",
+    "overlapping_formula_overlay",
+    "generic_classroom_panels",
+    "decorative_ui_clutter",
+    "random_camera_spins",
+    "unlabeled_transform_order",
+    "perspective_distortion_hiding_grid"
+  ],
+  "preferred_geometry": [
+    "grid_plane",
+    "red_green_blue_axis_arrows",
+    "labeled_coordinate_axes",
+    "blue_cube_with_colored_corner_markers",
+    "semi_transparent_ghosts",
+    "thin_orange_motion_trails",
+    "white_xy_rotation_arc",
+    "wireframe_original_scale_cube",
+    "side_by_side_3d_viewports"
+  ],
+  "overlay_policy": {
+    "formula_style": "teaching_overlay",
+    "disable_formula_overlay": false,
+    "avoid_center_occlusion": true
+  },
+  "critic_priorities": [
+    "preserve coordinate frame readability",
+    "keep before and after cube states distinct",
+    "make each transform type visually unambiguous",
+    "keep required matrix formulas readable without covering the cube",
+    "make composition order differences obvious in the split view"
+  ],
+  "critic_rubric": {
+    "must_have": [
+      "readable 3D grid and red, green, blue coordinate axes",
+      "blue cube with clear ghost or reference state for each transform",
+      "visible motion or correspondence for translation, rotation, and scale",
+      "required formula overlay for each narrative node",
+      "split viewport comparison showing different final results for order"
+    ],
+    "must_avoid": [
+      "unlabeled or color-confused axes",
+      "before and after cubes merging into one ambiguous object",
+      "formula overlays covering the cube, arcs, or split-view result",
+      "rotation shown about the wrong axis",
+      "uniform scale appearing as nonuniform stretching"
+    ],
+    "aesthetic_goals": [
+      "clean undergraduate teaching diagram style",
+      "stable three-quarter camera with minimal distracting motion",
+      "strong color separation between cube, axes, trails, and ghosts",
+      "thin readable helper geometry rather than heavy clutter"
+    ],
+    "blocking_conditions": [
+      "any required transform is missing or visually indistinguishable",
+      "composition order appears to produce the same final cube state",
+      "required formulas are absent or unreadable",
+      "coordinate frame is missing during coordinate-dependent demonstrations"
+    ]
+  },
+  "repair_policy": [
+    "restore labeled red, green, and blue axes whenever grid orientation becomes unclear",
+    "separate initial and final cube states with transparency, labels, or spatial offset",
+    "move formulas to an upper corner when they overlap the cube or helper paths",
+    "use a fixed three-quarter view except for the scale dolly-back needed to keep the cube visible",
+    "make translation arrows, rotation arcs, and scale rays thin but clearly colored",
+    "in the split viewport, label the left and right transform orders and preserve synchronized timing"
+  ],
+  "persistent_anchors": [],
+  "spatial_relationships": [],
+  "forbidden_abstractions": []
+}

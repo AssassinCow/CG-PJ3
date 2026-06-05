@@ -1,0 +1,41 @@
+{
+  "concept_id": "prism_dispersion_teaching",
+  "nodes": [
+    {
+      "id": "node_01",
+      "title": "Optical Bench Setup",
+      "description": "A single white ray approaches a transparent glass prism on a teaching bench, with the screen waiting to record the separated spectrum.",
+      "formulas": [],
+      "duration_sec": 3.5,
+      "visual_intent": "A clean vector-style optical bench fills the frame with subtle grid ticks; at center sits a light-cyan transparent triangular glass_prism with bright beveled edges, incident_white_ray enters thin and white from the left, and projection_screen stands upright on the right. Thin red, green, and blue output paths and their red_screen_dot, green_screen_dot, and blue_screen_dot are present as faint ghosted guides on the right, preserving the left-to-right layout without thick laser bars or sci-fi beams."
+    },
+    {
+      "id": "node_02",
+      "title": "Entry Refraction",
+      "description": "At the first prism face, the incident ray bends toward the surface normal according to Snell's law.",
+      "formulas": [
+        "n_1\\sin\\theta_i = n_2\\sin\\theta_t"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "The camera eases slightly closer to the prism entry face while the incident_white_ray strikes the left face, surface_normal_entry appears as a thin dashed line perpendicular to the glass surface, and a thin internal_ray bends downward toward that normal inside the cyan glass. Short attached labels sit beside the geometry: “incident ray” along the incoming line, “normal” beside surface_normal_entry, curved arcs marking theta_i outside the prism and theta_t inside it, with the Snell formula small near the lower bench edge and not covering the prism."
+    },
+    {
+      "id": "node_03",
+      "title": "Wavelength Separation",
+      "description": "Inside the prism, different refractive indices make red bend least, green bend more, and blue bend most.",
+      "formulas": [
+        "n_{blue} > n_{green} > n_{red}"
+      ],
+      "duration_sec": 4.5,
+      "visual_intent": "From the internal_ray region, three thin colored rays separate: spectrum_red_ray takes the shallowest path, spectrum_green_ray runs between, and spectrum_blue_ray bends most sharply through the prism and out of the exit face; surface_normal_exit appears as a second dashed line at the right prism face. The three rays animate to the projection_screen and land as separated red_screen_dot, green_screen_dot, and blue_screen_dot, while a small inequality label floats close to the prism edge with short attached “red,” “green,” and “blue” labels near their rays."
+    },
+    {
+      "id": "node_04",
+      "title": "Final Comparison on the Screen",
+      "description": "The same incident ray produces different output directions because each color experiences a different refractive index.",
+      "formulas": [],
+      "duration_sec": 4.0,
+      "visual_intent": "The camera returns to a balanced wide view of the full optical bench: incident_white_ray on the left, glass_prism centered, surface_normal_entry and surface_normal_exit dashed at their faces, spectrum_red_ray, spectrum_green_ray, and spectrum_blue_ray exiting rightward to the projection_screen. The screen holds three crisp separated colored dots or short streaks, with sparse attached labels “same incident ray” near the white ray, “different refractive index” near the colored fan, and “screen” beside the projection_screen, leaving all geometry unobstructed."
+    }
+  ]
+}

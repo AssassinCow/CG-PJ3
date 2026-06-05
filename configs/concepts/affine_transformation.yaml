@@ -1,0 +1,15 @@
+concept_id: affine_transformation
+title: Affine Transformations in 3D
+target_audience: undergraduate computer graphics students
+duration_sec: 18.0
+scene_profile: transformation_demo
+key_points:
+  - Translation (moving an object without rotation)
+  - Rotation about an axis (right-hand rule)
+  - Uniform scale (changing size while preserving proportions)
+  - Composition order matters (T then R is not R then T)
+must_show_formulas:
+  - "\\mathbf{T}(\\mathbf{t}) = \\begin{bmatrix} \\mathbf{I} & \\mathbf{t} \\\\ \\mathbf{0} & 1 \\end{bmatrix}"
+  - "\\mathbf{R}_z(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}"
+  - "\\mathbf{S}(s) = s\\mathbf{I}"
+  - "\\mathbf{M} = \\mathbf{T} \\, \\mathbf{R} \\, \\mathbf{S}"

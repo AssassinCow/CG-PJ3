@@ -1,0 +1,45 @@
+{
+  "concept_id": "affine_transformation",
+  "nodes": [
+    {
+      "id": "node_01",
+      "title": "Translation",
+      "description": "A translation adds the same displacement to every point, so the object slides without turning or changing shape.",
+      "formulas": [
+        "\\mathbf{T}(\\mathbf{t}) = \\begin{bmatrix} \\mathbf{I} & \\mathbf{t} \\\\ \\mathbf{0} & 1 \\end{bmatrix}"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "A blue cube sits on a gray 3D grid beside red, green, and blue coordinate axes; a yellow displacement arrow \\(\\mathbf{t}\\) points diagonally upward and right, and the cube glides along it while a translucent ghost cube remains at the start. The camera is fixed in a three-quarter view, and matching colored corner markers on the cube stay parallel throughout the motion."
+    },
+    {
+      "id": "node_02",
+      "title": "Rotation About an Axis",
+      "description": "A rotation about the z-axis keeps the axis fixed while points sweep circular paths according to the right-hand rule.",
+      "formulas": [
+        "\\mathbf{R}_z(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}"
+      ],
+      "duration_sec": 5.0,
+      "visual_intent": "The cube is centered near the origin with a bright vertical blue z-axis passing through it; a white circular arc lies flat in the xy-plane around the axis, with arrowheads curling counterclockwise. A semi-transparent right hand wraps around the z-axis with the thumb pointing upward, while the cube rotates through angle \\(\\theta\\) and its top face stays level."
+    },
+    {
+      "id": "node_03",
+      "title": "Uniform Scale",
+      "description": "Uniform scaling multiplies every coordinate by the same factor, changing size while preserving proportions.",
+      "formulas": [
+        "\\mathbf{S}(s) = s\\mathbf{I}"
+      ],
+      "duration_sec": 4.0,
+      "visual_intent": "The cube returns to the origin, surrounded by a faint wireframe copy of its original size; all eight vertices move radially outward along short glowing lines from the origin as the cube grows evenly. The camera slowly dollies back so the enlarged cube remains fully visible, with equal scale labels appearing along the x, y, and z directions."
+    },
+    {
+      "id": "node_04",
+      "title": "Composition Order",
+      "description": "Composed affine transforms are applied in sequence, and changing the order changes the final position and orientation.",
+      "formulas": [
+        "\\mathbf{M} = \\mathbf{T}\\,\\mathbf{R}\\,\\mathbf{S}"
+      ],
+      "duration_sec": 5.0,
+      "visual_intent": "The screen splits into two synchronized 3D viewports: on the left, the cube scales, rotates about the origin, then translates to a high-right position; on the right, the cube translates first and then rotates around the origin into a different final location. Distinct orange motion trails trace each path, and the two final cubes are connected by a dashed red line to emphasize that they do not coincide."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "profile_id": "mirror_reflection_vector_teaching",
+  "base_profile": "vector_teaching",
+  "visual_goal": "A clean minimal teaching stage shows specular reflection as a sequentially growing, labeled multi-bounce ray path between exactly two parallel mirrors.",
+  "allowed_helpers": [
+    "arrows",
+    "small_arrowheads",
+    "vector_labels",
+    "point_labels",
+    "mirror_labels",
+    "normal_arrows",
+    "angle_arcs",
+    "formula_overlay",
+    "highlight_markers",
+    "sequential_bevel_reveal",
+    "thin_ray_segments"
+  ],
+  "forbidden_helpers": [
+    "axes",
+    "grid",
+    "unlabeled_vectors",
+    "overlapping_formula_overlay",
+    "decorative_walls",
+    "prisms",
+    "extra_reflectors",
+    "volumetric_fog",
+    "laser_smoke",
+    "cinematic_haze",
+    "dense_laser_web",
+    "paragraph_text",
+    "classroom_panels"
+  ],
+  "preferred_geometry": [
+    "exactly_two_flat_mirror_panels",
+    "upright_rectangular_panels",
+    "thin_colored_ray_cylinders",
+    "small_laser_source",
+    "small_target_sphere",
+    "soft_reflective_floor_plane",
+    "neutral_gradient_background",
+    "compact_angle_arc_geometry"
+  ],
+  "overlay_policy": {
+    "formula_style": "teaching_overlay",
+    "disable_formula_overlay": false,
+    "avoid_center_occlusion": true
+  },
+  "critic_priorities": [
+    "keep the scene limited to two mirrors, one source, and one target",
+    "make ray segments, normals, labels, and angle arcs readable",
+    "show each ray segment growing sequentially rather than appearing all at once",
+    "keep formula overlays clear and away from the zigzag path",
+    "avoid fog, sci-fi atmosphere, and decorative optical clutter"
+  ],
+  "critic_rubric": {
+    "must_have": [
+      "exactly two labeled mirror panels M1 and M2",
+      "labeled source S, target T, and bounce points P1 to P5",
+      "thin colored ray segments with small arrowheads",
+      "normal arrows and paired theta_i theta_r arcs at bounce points",
+      "required reflection formulas in a clear teaching overlay"
+    ],
+    "must_avoid": [
+      "extra walls, prisms, reflectors, or decorative objects",
+      "axes, grids, or unrelated coordinate clutter",
+      "dense laser web or all segments appearing simultaneously",
+      "formula overlay covering mirrors, rays, or labels",
+      "fog, smoke, black void, or cinematic haze"
+    ],
+    "aesthetic_goals": [
+      "minimal clean educational composition",
+      "soft reflective floor and neutral gradient background",
+      "teaching-mirror panels with colored borders and faint sheen",
+      "clear color separation among ray segments, normals, and angle arcs",
+      "stable readable three-quarter camera framing"
+    ],
+    "blocking_conditions": [
+      "a required mirror, source, target, ray path, normal, or label is missing",
+      "angle equality theta_i equals theta_r is not visually clear",
+      "multi-bounce path does not terminate at T",
+      "scene contains extra reflectors or misleading optical elements",
+      "labels or formulas are unreadable or occlude the main construction"
+    ]
+  },
+  "repair_policy": [
+    "remove any object beyond M1, M2, S, T, the floor, labels, formulas, and reflection helpers",
+    "replace thick beams or laser webs with thin red, orange, or yellow ray cylinders or strokes",
+    "animate each segment with bevel_factor_end so the path advances one segment at a time",
+    "reposition formula overlays to the upper side of frame when they collide with geometry",
+    "shorten and separate normal arrows, angle arcs, and labels until each bounce is legible",
+    "keep mirror materials flat and instructional rather than photoreal glass or sci-fi panels"
+  ],
+  "persistent_anchors": [
+    "mirror_panel_M1",
+    "mirror_panel_M2",
+    "laser_source_S",
+    "target_sphere_T",
+    "soft_floor_plane",
+    "bounce_points_P1_to_P5",
+    "normal_arrows_N1_to_N5",
+    "multi_bounce_ray_path"
+  ],
+  "spatial_relationships": [
+    "mirror_panel_M1 and mirror_panel_M2 stand upright parallel and face each other",
+    "laser_source_S sits near the front-left side of the stage",
+    "target_sphere_T sits toward the back of the stage",
+    "bounce_points_P1_to_P5 lie directly on the two mirror surfaces in alternating order",
+    "normal_arrows_N1_to_N5 are perpendicular to their local mirror surfaces",
+    "multi_bounce_ray_path zigzags from laser_source_S through bounce_points_P1_to_P5 to target_sphere_T",
+    "formula_overlay stays outside the central mirror-and-ray construction"
+  ],
+  "forbidden_abstractions": [
+    "mirror panels replaced by generic glowing planes",
+    "ray path drawn as an unlabeled decorative zigzag",
+    "reflection law shown without normals or equal angle arcs",
+    "source and target omitted in favor of abstract vectors only",
+    "parallel mirrors turned into a room, corridor, prism setup, or extra reflector array",
+    "teaching labels replaced by paragraph text blocks"
+  ]
+}
