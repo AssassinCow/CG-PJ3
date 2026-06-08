@@ -24,9 +24,9 @@ complete 16-18 second clip in the README and links to the original MP4 file.
 | :---: |---|
 | Prism Dispersion Teaching </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/prism_dispersion_teaching/final.mp4) | ![Prism dispersion teaching](slides/assets/prism_dispersion_teaching_preview.gif) |
 | Mirror Reflection </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/mirror_reflection/final.mp4) | ![Mirror reflection](slides/assets/mirror_reflection_preview.gif) |
-| Affine Transformation </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/affine_transformation/final.mp4) | ![Affine transformation](slides/assets/affine_transformation_preview.gif)] |
+| Affine Transformation </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/affine_transformation/final.mp4) | ![Affine transformation](slides/assets/affine_transformation_preview.gif) |
 | Shape Morphing </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/shape_morphing/final.mp4) | ![Shape morphing](slides/assets/shape_morphing_preview.gif) |
-| Forward Kinematics Chain </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/forward_kinematics_chain/final.mp4) | [![Forward kinematics chain](slides/assets/forward_kinematics_chain_preview.gif) |
+| Forward Kinematics Chain </br> [Open video](https://raw.githubusercontent.com/AssassinCow/CG-PJ3/main/outputs/forward_kinematics_chain/final.mp4) | ![Forward kinematics chain](slides/assets/forward_kinematics_chain_preview.gif) |
 
 ## What This Repository Contains
 
